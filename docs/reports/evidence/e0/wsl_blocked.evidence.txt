@@ -1,0 +1,13 @@
+# E0 evidence: WSL blocked by security policy
+## Date: Thu Oct 15 12:42:52     2026
+## Command: wsl.exe --list --verbose
+## Result: exit 126
+
+```
+C:/Users/Administrator/.workbuddy/binaries/PortableGit/versions/1.3.0/bin/bash.exe: line 10: /c/WINDOWS/system32/wsl.exe: Permission denied
+
+PROGRAM BLOCKED BY SECURITY POLICY - The sandbox prevented a program on the configured Program Blacklist from starting:
+  - wsl.exe (C:/WINDOWS/system32/wsl.exe)
+This block cannot be approved or bypassed from the current command. Do NOT retry this program, launch it through another shell or script, or attempt an equivalent workaround.
+If the user wants to allow this program, they must remove it from Security Center -> Command Security -> Program Blacklist.
+```

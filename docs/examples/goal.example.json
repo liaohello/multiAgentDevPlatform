@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "example_only": true,
+  "goal_id": "goal-example-007",
+  "workspace_id": "workspace-example",
+  "status": "DRAFT",
+  "original_goal": "模拟：实现一个明确接口并用相关集成测试验证。",
+  "goal_version": 1,
+  "acceptance_version": 1,
+  "plan_version": 1,
+  "linked_sessions": [
+    {
+      "session_id": "sol-session-example",
+      "role": "planner_reviewer"
+    },
+    {
+      "session_id": "deepseek-session-example",
+      "role": "worker"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "ac-01",
+      "description": "接口行为符合冻结的输入输出约定",
+      "status": "UNKNOWN",
+      "evidence_ids": []
+    }
+  ],
+  "budget": {
+    "execution": {
+      "unit": "tokens",
+      "limit": 100000,
+      "usage_source": "example_only",
+      "settled": 0,
+      "unsettled_reservations": 0,
+      "gate": "OPEN"
+    },
+    "review_reserve": {
+      "enabled": false,
+      "limit": null,
+      "status": "proposed_not_configured"
+    },
+    "thresholds": {
+      "warning": 0.7,
+      "critical": 0.9,
+      "block_next_execution": 1
+    },
+    "at_limit": "finish_or_safe_interrupt_current_run_then_review",
+    "resume_requires": "explicit_user_approval_or_budget_change"
+  },
+  "frozen_skill_refs": [],
+  "note": "100000 is an illustrative number, not an approved user budget."
+}

@@ -1,0 +1,32 @@
+# Local runtime state and generated workbench data
+.agentproj/
+.workbuddy/
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Frontend dependencies and build output
+ui/node_modules/
+ui/dist/
+ui/.vite/
+ui/tsconfig.tsbuildinfo
+
+# Logs and local environment files
+*.log
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+desktop.ini
+

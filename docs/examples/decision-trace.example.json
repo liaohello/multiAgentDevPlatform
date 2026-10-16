@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "example_only": true,
+  "goal_id": "goal-example-007",
+  "plan_version": 1,
+  "trace": [
+    {
+      "sol_decision_id": "decision-example-016",
+      "session_id": "sol-session-example",
+      "worker_run_id": "run-example-039",
+      "caused_by_decision_id": "decision-example-016",
+      "worker_session_id": "deepseek-session-example",
+      "result_id": "result-example-039",
+      "review_decision_id": "decision-example-017",
+      "based_on_result_ids": [
+        "result-example-039"
+      ],
+      "action": "RETRY",
+      "visible_reason": "模拟：集成测试未通过，先检查失败证据。",
+      "next_plan_version": 1,
+      "evidence_ids": [
+        "evidence-example-001"
+      ],
+      "evidence_status": "PLACEHOLDER_NOT_REAL_EVIDENCE",
+      "skill_usage": [
+        {
+          "skill_ref": "candidate-code-simplifier",
+          "commit": null,
+          "content_sha256": null,
+          "configured": true,
+          "provided": false,
+          "loaded_observed": null,
+          "invoked_observed": null
+        }
+      ]
+    }
+  ],
+  "note": "Do not infer invocation or model reasoning from the configured skill list."
+}

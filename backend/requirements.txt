@@ -1,0 +1,6 @@
+# 直接依赖（安装：pip install -r requirements.txt -i https://pypi.org/simple）
+fastapi==0.143.2
+uvicorn[standard]==0.54.0
+pydantic==2.14.1
+pytest==9.1.1
+httpx==0.28.1

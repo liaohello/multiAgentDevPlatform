@@ -1,0 +1,137 @@
+{
+ "base": "http://127.0.0.1:8787",
+ "sections": {
+  "A02_adapters": {
+   "status": 200,
+   "body": {
+    "windows_sol": {
+     "status": "PASS",
+     "detail": "codex bin: C:\\Users\\Administrator\\AppData\\Local\\OpenAI\\Codex\\bin\\9614f1d9b40d9c4f\\codex.exe"
+    },
+    "wsl_worker": {
+     "status": "BLOCKED",
+     "detail": "wsl.exe blocked by environment policy: [WinError 5] 拒绝访问。",
+     "wsl_exe": "C:\\WINDOWS\\system32\\wsl.exe",
+     "distro": null,
+     "codex_cmd": "codex"
+    },
+    "wsl_distro": null
+   }
+  },
+  "A15_boundary": {
+   "no_token": 401,
+   "wrong_token": 401,
+   "foreign_origin": 403,
+   "local_origin": 200
+  },
+  "A09_idempotency": {
+   "first": {
+    "status": 200,
+    "body": {
+     "accepted": true,
+     "duplicate": false,
+     "run_id": "run_e55e75cec431",
+     "status": "QUEUED"
+    }
+   },
+   "second": {
+    "status": 200,
+    "body": {
+     "accepted": true,
+     "duplicate": true,
+     "run_id": "run_e55e75cec431",
+     "status": "QUEUED"
+    }
+   },
+   "runs_count": 1,
+   "same_run": true,
+   "goal_id": "goal_24561151c935"
+  },
+  "A07_budget": {
+   "goal_id": "goal_275e60318bf4",
+   "usage": {
+    "budget_tokens": 5000,
+    "used_tokens": 5300,
+    "reserved_tokens": 0,
+    "committed_tokens": 5300,
+    "ratio": 1.06,
+    "level": "blocked",
+    "gate": "CLOSED",
+    "gate_row": {
+     "goal_id": "goal_275e60318bf4",
+     "gate": "CLOSED",
+     "closed_at": "2026-10-15T13:40:52-07:00",
+     "closed_reason": "committed usage 5300 >= budget 5000",
+     "resumed_at": null,
+     "resume_note": null
+    },
+    "by_exactness": {
+     "simulated": 5300
+    }
+   },
+   "goal_status": "PAUSED",
+   "goal_stage": "budget_blocked",
+   "completion_note": "预算门禁关闭：budget gate CLOSED: committed usage 5300 >= budget 5000",
+   "blocked_start_status": 409,
+   "blocked_start_detail": "goal is PAUSED; resume it before starting a run",
+   "resume_without_budget_status": 409,
+   "resume_without_budget_detail": "budget gate is CLOSED; resume requires budget.resume with an explicit note/adjustment",
+   "budget_closed_events": [
+    {
+     "cause": "usage_settlement",
+     "reason": "committed usage 5300 >= budget 5000"
+    },
+    {
+     "cause": "review_admission",
+     "reason": "budget gate CLOSED: committed usage 5300 >= budget 5000"
+    }
+   ],
+   "runs_before_resume": 1,
+   "after_resume": {
+    "goal_status": "COMPLETED",
+    "runs": [
+     {
+      "id": "run_bd059d566dce",
+      "status": "SUCCEEDED",
+      "result": "failed"
+     },
+     {
+      "id": "run_12a2836f21dd",
+      "status": "SUCCEEDED",
+      "result": "completed"
+     }
+    ],
+    "reviews": [
+     {
+      "overall": "FAIL",
+      "applied": "replan"
+     },
+     {
+      "overall": "PASS",
+      "applied": "completed"
+     }
+    ],
+    "gate": "OPEN",
+    "budget_tokens": 20000,
+    "resumed_events": [
+     "用户批准：追加预算至 20000"
+    ]
+   }
+  },
+  "A14_workflows": {
+   "optimize": {
+    "status": 200,
+    "report_id": "wfr_7380978bc0aa"
+   },
+   "postmortem": {
+    "status": 200,
+    "report_id": "wfr_852e6a318e44"
+   },
+   "token_audit": {
+    "status": 200,
+    "report_id": "wfr_4145f33adbdc"
+   },
+   "reports_count": 3
+  }
+ }
+}

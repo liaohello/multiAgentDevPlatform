@@ -1,0 +1,568 @@
+{
+ "base": "http://127.0.0.1:8787",
+ "steps": [
+  {
+   "step": "register-workspace",
+   "status": 200
+  },
+  {
+   "step": "create-real-goal",
+   "status": 200,
+   "goal_id": "goal_cc3f0c49052a"
+  },
+  {
+   "step": "plan-accepted",
+   "status": 200,
+   "body": {
+    "accepted": true,
+    "operation": "plan",
+    "goal_id": "goal_cc3f0c49052a"
+   }
+  },
+  {
+   "step": "plan-result",
+   "plan_version": 1,
+   "status": "READY"
+  },
+  {
+   "step": "start-accepted",
+   "status": 200,
+   "body": {
+    "accepted": true,
+    "duplicate": false,
+    "run_id": "run_388e47d5ec35",
+    "status": "QUEUED"
+   }
+  }
+ ],
+ "workspace_path": "C:\\Users\\Administrator\\Desktop\\tool\\agentProj\\.agentproj\\devtools\\live-real-workspace",
+ "workspace": {
+  "id": "ws_85ac8cd63976",
+  "wsl_path": "/mnt/c/Users/Administrator/Desktop/tool/agentProj/.agentproj/devtools/live-real-workspace"
+ },
+ "goal_id": "goal_cc3f0c49052a",
+ "after_plan": {
+  "seconds": 12.0,
+  "plan_version": 1,
+  "status": "READY",
+  "stage": "planned",
+  "usage": 15925,
+  "plan_md": "## 计划摘要\n在指定工作目录内实现 normalize_tags(text)，按逗号拆分、清理空白、忽略空项、稳定去重，并使用标准库测试完成验证。执行者为 WSL 内编码代理。\n\n### 验收标准\n- C1: 必需：存在 normalize_tags(text) 实现，并按英文逗号拆分输入字符串。 （必需）\n- C2: 必需：每个拆分项都会去除首尾空白。 （必需）\n- C3: 必需：空字符串项及仅包含空白的项会被忽略。 （必需）\n- C4: 必需：重复标签只保留首次出现的一项。 （必需）\n- C5: 必需：非重复标签的输出顺序与其首次出现顺序一致。 （必需）\n- C6: 必需：使用标准库测试覆盖正常输入、空项、空白、重复项及顺序保持，并且测试通过。 （必需）\n- C7: 必需：执行者仅修改指定工作目录内的文件。 （必需）\n\n### 步骤\n1. 在 WSL 中进入 /mnt/c/Users/Administrator/Desktop/tool/agentProj/.agentproj/devtools/live-real-workspace。\n1. 检查现有项目结构、入口模块、测试框架和当前测试状态。\n1. 实现 normalize_tags(text)，保持项目既有代码风格与公共接口约定。\n1. 补充或更新标准库测试，覆盖拆分、首尾空白、空项、稳定去重和顺序。\n1. 运行测试与必要的定向验证，确认所有验收标准满足。\n\n### 任务\n- **检查项目结构与现状**：在 WSL 中仅查看工作目录内文件，定位 normalize_tags 应放置的模块、现有测试目录及项目测试运行方式；先运行现有测试以建立基线。\n  - 交付物：明确实现文件、测试文件和可用测试命令；记录基线测试结果。\n  - 验证：`python -m pytest -q`\n- **实现 normalize_tags**：在既定模块中实现 normalize_tags(text)：使用英文逗号拆分；对每项执行 strip；跳过空项；按首次出现顺序去重；返回项目约定的标签集合类型，通常为 list。仅修改工作目录内必要文件。\n  - 交付物：可被项目导入并调用的 normalize_tags 实现。\n  - 验证：`python -c from <module> import normalize_tags; assert normalize_tags(' a, b, a ,, c ') == ['a', 'b', 'c']`\n- **补充标准库测试**：使用项目现有测试组织方式；若无测试框架约定，则使用 Python 标准库 unittest。至少覆盖基本拆分、首尾空白、空项、重复项、稳定顺序以及空输入。\n  - 交付物：提交到工作目录内的标准库测试用例。\n  - 验证：`python -m un",
+  "criteria": [
+   "必需：存在 normalize_tags(text) 实现，并按英文逗号拆分输入字符串。",
+   "必需：每个拆分项都会去除首尾空白。",
+   "必需：空字符串项及仅包含空白的项会被忽略。",
+   "必需：重复标签只保留首次出现的一项。",
+   "必需：非重复标签的输出顺序与其首次出现顺序一致。",
+   "必需：使用标准库测试覆盖正常输入、空项、空白、重复项及顺序保持，并且测试通过。",
+   "必需：执行者仅修改指定工作目录内的文件。"
+  ]
+ },
+ "after_start": {
+  "goal_status": "PAUSED",
+  "goal_stage": "run_failed",
+  "completion_note": "worker adapter unavailable: wsl.exe blocked by environment policy: [WinError 5] 拒绝访问。",
+  "run": {
+   "id": "run_388e47d5ec35",
+   "status": "FAILED",
+   "error_class": "ADAPTER_BLOCKED",
+   "summary": {
+    "note": "worker adapter unavailable: wsl.exe blocked by environment policy: [WinError 5] 拒绝访问。"
+   }
+  },
+  "usage": {
+   "budget_tokens": null,
+   "used_tokens": 15925,
+   "reserved_tokens": 0,
+   "committed_tokens": 15925,
+   "ratio": null,
+   "level": "unconfigured",
+   "gate": "OPEN",
+   "gate_row": null,
+   "by_exactness": {
+    "reported": 15925
+   }
+  }
+ },
+ "bundle": {
+  "goal": {
+   "id": "goal_cc3f0c49052a",
+   "workspace_id": "ws_85ac8cd63976",
+   "sol_session_id": "sess_3ddf8fbeaf4e",
+   "worker_session_id": "sess_1daa1b9b122b",
+   "title": "真实闭环演示：实现 normalize_tags",
+   "original_request": "实现 normalize_tags(text)：按逗号拆分、去首尾空白、忽略空项、去重并保留顺序。用标准库测试验证。",
+   "status": "PAUSED",
+   "stage": "run_failed",
+   "mode": "real",
+   "budget_tokens": null,
+   "budget_policy": "{\"scenario\": \"demo\"}",
+   "goal_version": 1,
+   "acceptance_version": 1,
+   "plan_version": 1,
+   "current_plan_id": "plan_e1a5e22c9ac6",
+   "auto_advance": 1,
+   "auto_rounds": 0,
+   "completion_note": "worker adapter unavailable: wsl.exe blocked by environment policy: [WinError 5] 拒绝访问。",
+   "created_at": "2026-10-15T13:40:02-07:00",
+   "updated_at": "2026-10-15T13:40:14-07:00"
+  },
+  "workspace": {
+   "id": "ws_85ac8cd63976",
+   "name": "真实演示目录",
+   "windows_path": "C:\\Users\\Administrator\\Desktop\\tool\\agentProj\\.agentproj\\devtools\\live-real-workspace",
+   "wsl_path": "/mnt/c/Users/Administrator/Desktop/tool/agentProj/.agentproj/devtools/live-real-workspace",
+   "wsl_distro": null,
+   "fs_side": "windows",
+   "authorized_scopes": "[]",
+   "created_at": "2026-10-15T13:40:02-07:00",
+   "updated_at": "2026-10-15T13:40:02-07:00"
+  },
+  "plan": {
+   "id": "plan_e1a5e22c9ac6",
+   "goal_id": "goal_cc3f0c49052a",
+   "version": 1,
+   "content_md": "## 计划摘要\n在指定工作目录内实现 normalize_tags(text)，按逗号拆分、清理空白、忽略空项、稳定去重，并使用标准库测试完成验证。执行者为 WSL 内编码代理。\n\n### 验收标准\n- C1: 必需：存在 normalize_tags(text) 实现，并按英文逗号拆分输入字符串。 （必需）\n- C2: 必需：每个拆分项都会去除首尾空白。 （必需）\n- C3: 必需：空字符串项及仅包含空白的项会被忽略。 （必需）\n- C4: 必需：重复标签只保留首次出现的一项。 （必需）\n- C5: 必需：非重复标签的输出顺序与其首次出现顺序一致。 （必需）\n- C6: 必需：使用标准库测试覆盖正常输入、空项、空白、重复项及顺序保持，并且测试通过。 （必需）\n- C7: 必需：执行者仅修改指定工作目录内的文件。 （必需）\n\n### 步骤\n1. 在 WSL 中进入 /mnt/c/Users/Administrator/Desktop/tool/agentProj/.agentproj/devtools/live-real-workspace。\n1. 检查现有项目结构、入口模块、测试框架和当前测试状态。\n1. 实现 normalize_tags(text)，保持项目既有代码风格与公共接口约定。\n1. 补充或更新标准库测试，覆盖拆分、首尾空白、空项、稳定去重和顺序。\n1. 运行测试与必要的定向验证，确认所有验收标准满足。\n\n### 任务\n- **检查项目结构与现状**：在 WSL 中仅查看工作目录内文件，定位 normalize_tags 应放置的模块、现有测试目录及项目测试运行方式；先运行现有测试以建立基线。\n  - 交付物：明确实现文件、测试文件和可用测试命令；记录基线测试结果。\n  - 验证：`python -m pytest -q`\n- **实现 normalize_tags**：在既定模块中实现 normalize_tags(text)：使用英文逗号拆分；对每项执行 strip；跳过空项；按首次出现顺序去重；返回项目约定的标签集合类型，通常为 list。仅修改工作目录内必要文件。\n  - 交付物：可被项目导入并调用的 normalize_tags 实现。\n  - 验证：`python -c from <module> import normalize_tags; assert normalize_tags(' a, b, a ,, c ') == ['a', 'b', 'c']`\n- **补充标准库测试**：使用项目现有测试组织方式；若无测试框架约定，则使用 Python 标准库 unittest。至少覆盖基本拆分、首尾空白、空项、重复项、稳定顺序以及空输入。\n  - 交付物：提交到工作目录内的标准库测试用例。\n  - 验证：`python -m unittest discover -v`\n- **运行完整验证**：运行项目测试、标准库测试和一条端到端示例验证；检查工作区变更，确认没有修改工作目录之外的文件。\n  - 交付物：所有相关测试通过，且变更范围符合要求。\n  - 验证：`python -m pytest -q`\n  - 验证：`python -m unittest discover -v`\n  - 验证：`python -c from <module> import normalize_tags; cases={'a,b,c':['a','b','c'],' a, b, a ,, c ':['a','b','c'],',,  ,':['']}; assert normalize_tags('a,b,c') == ['a','b','c']; assert normalize_tags(' a, b, a ,, c ') == ['a','b','c']; assert normalize_tags(', ,  ,') == []`\n\n> <module> 是占位符，执行时应替换为实际实现模块名。若项目没有 pytest，不应新增第三方依赖；改用 python -m unittest。所有路径限制在指定工作目录及其 WSL 映射目录内。",
+   "content_json": {
+    "summary": "在指定工作目录内实现 normalize_tags(text)，按逗号拆分、清理空白、忽略空项、稳定去重，并使用标准库测试完成验证。执行者为 WSL 内编码代理。",
+    "acceptance": [
+     {
+      "key": "C1",
+      "text": "必需：存在 normalize_tags(text) 实现，并按英文逗号拆分输入字符串。",
+      "required": true
+     },
+     {
+      "key": "C2",
+      "text": "必需：每个拆分项都会去除首尾空白。",
+      "required": true
+     },
+     {
+      "key": "C3",
+      "text": "必需：空字符串项及仅包含空白的项会被忽略。",
+      "required": true
+     },
+     {
+      "key": "C4",
+      "text": "必需：重复标签只保留首次出现的一项。",
+      "required": true
+     },
+     {
+      "key": "C5",
+      "text": "必需：非重复标签的输出顺序与其首次出现顺序一致。",
+      "required": true
+     },
+     {
+      "key": "C6",
+      "text": "必需：使用标准库测试覆盖正常输入、空项、空白、重复项及顺序保持，并且测试通过。",
+      "required": true
+     },
+     {
+      "key": "C7",
+      "text": "必需：执行者仅修改指定工作目录内的文件。",
+      "required": true
+     }
+    ],
+    "steps": [
+     "在 WSL 中进入 /mnt/c/Users/Administrator/Desktop/tool/agentProj/.agentproj/devtools/live-real-workspace。",
+     "检查现有项目结构、入口模块、测试框架和当前测试状态。",
+     "实现 normalize_tags(text)，保持项目既有代码风格与公共接口约定。",
+     "补充或更新标准库测试，覆盖拆分、首尾空白、空项、稳定去重和顺序。",
+     "运行测试与必要的定向验证，确认所有验收标准满足。"
+    ],
+    "tasks": [
+     {
+      "title": "检查项目结构与现状",
+      "instructions": "在 WSL 中仅查看工作目录内文件，定位 normalize_tags 应放置的模块、现有测试目录及项目测试运行方式；先运行现有测试以建立基线。",
+      "deliverable": "明确实现文件、测试文件和可用测试命令；记录基线测试结果。",
+      "verify_commands": [
+       [
+        "python",
+        "-m",
+        "pytest",
+        "-q"
+       ]
+      ]
+     },
+     {
+      "title": "实现 normalize_tags",
+      "instructions": "在既定模块中实现 normalize_tags(text)：使用英文逗号拆分；对每项执行 strip；跳过空项；按首次出现顺序去重；返回项目约定的标签集合类型，通常为 list。仅修改工作目录内必要文件。",
+      "deliverable": "可被项目导入并调用的 normalize_tags 实现。",
+      "verify_commands": [
+       [
+        "python",
+        "-c",
+        "from <module> import normalize_tags; assert normalize_tags(' a, b, a ,, c ') == ['a', 'b', 'c']"
+       ]
+      ]
+     },
+     {
+      "title": "补充标准库测试",
+      "instructions": "使用项目现有测试组织方式；若无测试框架约定，则使用 Python 标准库 unittest。至少覆盖基本拆分、首尾空白、空项、重复项、稳定顺序以及空输入。",
+      "deliverable": "提交到工作目录内的标准库测试用例。",
+      "verify_commands": [
+       [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-v"
+       ]
+      ]
+     },
+     {
+      "title": "运行完整验证",
+      "instructions": "运行项目测试、标准库测试和一条端到端示例验证；检查工作区变更，确认没有修改工作目录之外的文件。",
+      "deliverable": "所有相关测试通过，且变更范围符合要求。",
+      "verify_commands": [
+       [
+        "python",
+        "-m",
+        "pytest",
+        "-q"
+       ],
+       [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-v"
+       ],
+       [
+        "python",
+        "-c",
+        "from <module> import normalize_tags; cases={'a,b,c':['a','b','c'],' a, b, a ,, c ':['a','b','c'],',,  ,':['']}; assert normalize_tags('a,b,c') == ['a','b','c']; assert normalize_tags(' a, b, a ,, c ') == ['a','b','c']; assert normalize_tags(', ,  ,') == []"
+       ]
+      ]
+     }
+    ],
+    "notes": "<module> 是占位符，执行时应替换为实际实现模块名。若项目没有 pytest，不应新增第三方依赖；改用 python -m unittest。所有路径限制在指定工作目录及其 WSL 映射目录内。"
+   },
+   "change_reason": "initial plan",
+   "created_by_decision_id": "dec_e83d0f84e56e",
+   "frozen_at": "2026-10-15T13:40:14-07:00",
+   "created_at": "2026-10-15T13:40:14-07:00"
+  },
+  "plans": [
+   {
+    "id": "plan_e1a5e22c9ac6",
+    "goal_id": "goal_cc3f0c49052a",
+    "version": 1,
+    "change_reason": "initial plan",
+    "created_at": "2026-10-15T13:40:14-07:00"
+   }
+  ],
+  "criteria": [
+   {
+    "id": "crit_11b991e41b23",
+    "goal_id": "goal_cc3f0c49052a",
+    "acceptance_version": 1,
+    "criterion_key": "C1",
+    "text": "必需：存在 normalize_tags(text) 实现，并按英文逗号拆分输入字符串。",
+    "required": 1,
+    "created_at": "2026-10-15T13:40:14-07:00"
+   },
+   {
+    "id": "crit_bf1111c61919",
+    "goal_id": "goal_cc3f0c49052a",
+    "acceptance_version": 1,
+    "criterion_key": "C2",
+    "text": "必需：每个拆分项都会去除首尾空白。",
+    "required": 1,
+    "created_at": "2026-10-15T13:40:14-07:00"
+   },
+   {
+    "id": "crit_fe8338d5a80e",
+    "goal_id": "goal_cc3f0c49052a",
+    "acceptance_version": 1,
+    "criterion_key": "C3",
+    "text": "必需：空字符串项及仅包含空白的项会被忽略。",
+    "required": 1,
+    "created_at": "2026-10-15T13:40:14-07:00"
+   },
+   {
+    "id": "crit_98f1b005c4be",
+    "goal_id": "goal_cc3f0c49052a",
+    "acceptance_version": 1,
+    "criterion_key": "C4",
+    "text": "必需：重复标签只保留首次出现的一项。",
+    "required": 1,
+    "created_at": "2026-10-15T13:40:14-07:00"
+   },
+   {
+    "id": "crit_53713c77d127",
+    "goal_id": "goal_cc3f0c49052a",
+    "acceptance_version": 1,
+    "criterion_key": "C5",
+    "text": "必需：非重复标签的输出顺序与其首次出现顺序一致。",
+    "required": 1,
+    "created_at": "2026-10-15T13:40:14-07:00"
+   },
+   {
+    "id": "crit_49744d581dfc",
+    "goal_id": "goal_cc3f0c49052a",
+    "acceptance_version": 1,
+    "criterion_key": "C6",
+    "text": "必需：使用标准库测试覆盖正常输入、空项、空白、重复项及顺序保持，并且测试通过。",
+    "required": 1,
+    "created_at": "2026-10-15T13:40:14-07:00"
+   },
+   {
+    "id": "crit_5324e8922c09",
+    "goal_id": "goal_cc3f0c49052a",
+    "acceptance_version": 1,
+    "criterion_key": "C7",
+    "text": "必需：执行者仅修改指定工作目录内的文件。",
+    "required": 1,
+    "created_at": "2026-10-15T13:40:14-07:00"
+   }
+  ],
+  "runs": [
+   {
+    "id": "run_388e47d5ec35",
+    "goal_id": "goal_cc3f0c49052a",
+    "task_id": "task_482c656ed421",
+    "decision_id": "dec_129a8c081579",
+    "session_id": "sess_1daa1b9b122b",
+    "mode": "real",
+    "status": "FAILED",
+    "is_auto": 0,
+    "idempotency_key": "real-start-1",
+    "native_thread_id": null,
+    "native_turn_id": null,
+    "process_ref": null,
+    "error_class": "ADAPTER_BLOCKED",
+    "started_at": "2026-10-15T13:40:14-07:00",
+    "ended_at": "2026-10-15T13:40:14-07:00",
+    "created_at": "2026-10-15T13:40:14-07:00",
+    "summary": {
+     "note": "worker adapter unavailable: wsl.exe blocked by environment policy: [WinError 5] 拒绝访问。"
+    },
+    "result": {
+     "id": "res_402f2a31780b",
+     "run_id": "run_388e47d5ec35",
+     "status": "failed",
+     "created_at": "2026-10-15T13:40:14-07:00",
+     "summary": {
+      "note": "worker adapter unavailable: wsl.exe blocked by environment policy: [WinError 5] 拒绝访问。",
+      "error_class": "ADAPTER_BLOCKED"
+     },
+     "changes": [],
+     "tests": [],
+     "evidence_refs": []
+    },
+    "evidence": []
+   }
+  ],
+  "reviews": [],
+  "decisions": [
+   {
+    "id": "dec_e83d0f84e56e",
+    "goal_id": "goal_cc3f0c49052a",
+    "kind": "plan",
+    "reason_json": "{\"reason\": \"initial plan\"}",
+    "based_on_result_ids": "[]",
+    "based_on_review_ids": "[]",
+    "next_action": "execute",
+    "created_by": "sol",
+    "created_at": "2026-10-15T13:40:14-07:00",
+    "reason": {
+     "reason": "initial plan"
+    }
+   },
+   {
+    "id": "dec_129a8c081579",
+    "goal_id": "goal_cc3f0c49052a",
+    "kind": "execute",
+    "reason_json": "{\"is_auto\": false}",
+    "based_on_result_ids": "[]",
+    "based_on_review_ids": "[]",
+    "next_action": "run",
+    "created_by": "controller",
+    "created_at": "2026-10-15T13:40:14-07:00",
+    "reason": {
+     "is_auto": false
+    }
+   }
+  ],
+  "usage": {
+   "budget_tokens": null,
+   "used_tokens": 15925,
+   "reserved_tokens": 0,
+   "committed_tokens": 15925,
+   "ratio": null,
+   "level": "unconfigured",
+   "gate": "OPEN",
+   "gate_row": null,
+   "by_exactness": {
+    "reported": 15925
+   }
+  },
+  "usage_series": [
+   {
+    "ts": "2026-10-15T13:40:14-07:00",
+    "total_tokens": 15925,
+    "run_id": null,
+    "model": null,
+    "exactness": "reported",
+    "cumulative": 15925
+   }
+  ],
+  "events": [
+   {
+    "seq": 84,
+    "schema_version": "1.0",
+    "event_id": "evt_b891e1e36ac4",
+    "ts": "2026-10-15T13:40:02-07:00",
+    "type": "goal.created",
+    "workspace_id": "ws_85ac8cd63976",
+    "goal_id": "goal_cc3f0c49052a",
+    "session_id": "sess_3ddf8fbeaf4e",
+    "run_id": null,
+    "caused_by": null,
+    "payload": {
+     "title": "真实闭环演示：实现 normalize_tags",
+     "mode": "real",
+     "budget_tokens": null,
+     "scenario": "demo"
+    }
+   },
+   {
+    "seq": 85,
+    "schema_version": "1.0",
+    "event_id": "evt_1a1b8ee2ff17",
+    "ts": "2026-10-15T13:40:03-07:00",
+    "type": "session.resumed",
+    "workspace_id": "ws_85ac8cd63976",
+    "goal_id": "goal_cc3f0c49052a",
+    "session_id": "sess_3ddf8fbeaf4e",
+    "run_id": null,
+    "caused_by": null,
+    "payload": {
+     "role": "sol",
+     "thread_id": "01a1414b-198e-7300-96b3-c0f17c0b7c8c",
+     "action": "plan"
+    }
+   },
+   {
+    "seq": 86,
+    "schema_version": "1.0",
+    "event_id": "evt_b0af7d01a75c",
+    "ts": "2026-10-15T13:40:14-07:00",
+    "type": "budget.usage_recorded",
+    "workspace_id": "ws_85ac8cd63976",
+    "goal_id": "goal_cc3f0c49052a",
+    "session_id": "sess_3ddf8fbeaf4e",
+    "run_id": null,
+    "caused_by": null,
+    "payload": {
+     "usage_id": "usg_71e937c98912",
+     "tokens": 15925,
+     "exactness": "reported",
+     "source": "thread_snapshot",
+     "model": null,
+     "note": null
+    }
+   },
+   {
+    "seq": 87,
+    "schema_version": "1.0",
+    "event_id": "evt_d21cdc93059a",
+    "ts": "2026-10-15T13:40:14-07:00",
+    "type": "goal.planned",
+    "workspace_id": "ws_85ac8cd63976",
+    "goal_id": "goal_cc3f0c49052a",
+    "session_id": null,
+    "run_id": null,
+    "caused_by": null,
+    "payload": {
+     "plan_id": "plan_e1a5e22c9ac6",
+     "version": 1,
+     "reason": "initial plan"
+    }
+   },
+   {
+    "seq": 88,
+    "schema_version": "1.0",
+    "event_id": "evt_dee2d136e381",
+    "ts": "2026-10-15T13:40:14-07:00",
+    "type": "decision.created",
+    "workspace_id": "ws_85ac8cd63976",
+    "goal_id": "goal_cc3f0c49052a",
+    "session_id": null,
+    "run_id": null,
+    "caused_by": null,
+    "payload": {
+     "decision_id": "dec_e83d0f84e56e",
+     "kind": "plan",
+     "next_action": "execute",
+     "reason": "initial plan"
+    }
+   },
+   {
+    "seq": 89,
+    "schema_version": "1.0",
+    "event_id": "evt_e7229892d1c1",
+    "ts": "2026-10-15T13:40:14-07:00",
+    "type": "run.queued",
+    "workspace_id": "ws_85ac8cd63976",
+    "goal_id": "goal_cc3f0c49052a",
+    "session_id": null,
+    "run_id": "run_388e47d5ec35",
+    "caused_by": null,
+    "payload": {
+     "task_id": "task_482c656ed421",
+     "is_auto": false,
+     "plan_version": 1
+    }
+   },
+   {
+    "seq": 90,
+    "schema_version": "1.0",
+    "event_id": "evt_a7b1e3b36b55",
+    "ts": "2026-10-15T13:40:14-07:00",
+    "type": "decision.created",
+    "workspace_id": "ws_85ac8cd63976",
+    "goal_id": "goal_cc3f0c49052a",
+    "session_id": null,
+    "run_id": "run_388e47d5ec35",
+    "caused_by": null,
+    "payload": {
+     "decision_id": "dec_129a8c081579",
+     "kind": "execute",
+     "next_action": "run"
+    }
+   },
+   {
+    "seq": 91,
+    "schema_version": "1.0",
+    "event_id": "evt_13cfe5e16c16",
+    "ts": "2026-10-15T13:40:14-07:00",
+    "type": "run.starting",
+    "workspace_id": "ws_85ac8cd63976",
+    "goal_id": "goal_cc3f0c49052a",
+    "session_id": null,
+    "run_id": "run_388e47d5ec35",
+    "caused_by": null,
+    "payload": {
+     "run_id": "run_388e47d5ec35"
+    }
+   },
+   {
+    "seq": 92,
+    "schema_version": "1.0",
+    "event_id": "evt_a3335c713396",
+    "ts": "2026-10-15T13:40:14-07:00",
+    "type": "run.failed",
+    "workspace_id": "ws_85ac8cd63976",
+    "goal_id": "goal_cc3f0c49052a",
+    "session_id": null,
+    "run_id": "run_388e47d5ec35",
+    "caused_by": null,
+    "payload": {
+     "error_class": "ADAPTER_BLOCKED",
+     "note": "worker adapter unavailable: wsl.exe blocked by environment policy: [WinError 5] 拒绝访问。"
+    }
+   }
+  ]
+ }
+}

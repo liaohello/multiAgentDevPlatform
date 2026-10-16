@@ -1,0 +1,229 @@
+{
+  "scope": "isolated local simulation and controlled stubs; no paid model calls; no WSL launch; no business code edited",
+  "probes": [
+    {
+      "id": "budget_restart_double_count",
+      "probe_status": "completed",
+      "result": {
+        "expected_total": 150,
+        "observed_total": 250,
+        "expected_new_delta": 50,
+        "observed_new_delta": 150,
+        "bug_reproduced": true
+      }
+    },
+    {
+      "id": "late_review_overwrites_cancel",
+      "probe_status": "completed",
+      "result": {
+        "status_before_late_review": "CANCELLED",
+        "status_after_late_review": "COMPLETED",
+        "original_result_status": "failed",
+        "bug_reproduced": true
+      }
+    },
+    {
+      "id": "review_completes_despite_blocked_and_failed_checks",
+      "probe_status": "completed",
+      "result": {
+        "overall": "BLOCKED",
+        "next_action": "request_user",
+        "program_result": "failed",
+        "program_exit_codes": [
+          1
+        ],
+        "goal_after": "COMPLETED",
+        "bug_reproduced": true
+      }
+    },
+    {
+      "id": "multi_task_plan_always_first",
+      "probe_status": "completed",
+      "result": {
+        "plan_task_count": 3,
+        "first_admitted_task": "Task 1",
+        "next_admitted_task": "Task 1",
+        "bug_reproduced": true
+      }
+    },
+    {
+      "id": "wsl_auto_distro_not_bound",
+      "probe_status": "completed",
+      "result": {
+        "no_external_process_launched": true,
+        "probe_result": "PASS / distro Ubuntu",
+        "constructed_command": [
+          "wsl.exe"
+        ],
+        "availability": {
+          "status": "FAIL",
+          "detail": "fixture native checks passed; path check failed for distro Ubuntu"
+        },
+        "bug_reproduced": true
+      }
+    },
+    {
+      "id": "wiki_scope_escape_and_wrong_body",
+      "probe_status": "completed",
+      "result": {
+        "test_files_are_owned_fixtures": true,
+        "sibling_path_should_be_denied": true,
+        "sibling_marker_returned": true,
+        "expected_body_title": "REVIEW_WORKSPACE_MARKER",
+        "actual_body_is_project_readme": true,
+        "prefix_escape_reproduced": true,
+        "wrong_body_reproduced": true
+      }
+    },
+    {
+      "id": "wiki_demo_scan_excludes_ancestor",
+      "probe_status": "completed",
+      "result": {
+        "demo_readme_exists": true,
+        "created_or_updated": 0,
+        "bug_reproduced": true
+      }
+    },
+    {
+      "id": "skill_revocation_and_delivery",
+      "probe_status": "completed",
+      "result": {
+        "revoked_before_run": true,
+        "states": [
+          "configured",
+          "provided"
+        ],
+        "revoked_skill_marked_provided": true,
+        "captured_worker_prompt_mentions_selected_skill": false,
+        "native_input_implemented_as_plain_prompt_only": true
+      }
+    },
+    {
+      "id": "timeout_does_not_stop_native_turn",
+      "probe_status": "completed",
+      "result": {
+        "status": "timeout",
+        "native_process_still_alive": true,
+        "requests": [
+          "turn/start"
+        ],
+        "active_turn_after_timeout": null,
+        "bug_reproduced": true
+      }
+    },
+    {
+      "id": "recovery_releases_unknown_ownership_slot",
+      "probe_status": "completed",
+      "result": {
+        "ownership_verification": false,
+        "old_run": {
+          "status": "INTERRUPTED",
+          "summary_json": "{\"note\": \"app restarted; process ownership unknown, verify native process\"}"
+        },
+        "next_run_status": "QUEUED",
+        "new_run_admitted_despite_unknown_previous_process": true
+      }
+    }
+  ],
+  "reviewed_code_sha256": {
+    "backend/app/controller.py": "970a913f6850b07281f62bfe14ee9320fccf6644fbc6b41cd25b806e8342ab79",
+    "backend/app/budget.py": "2126e4317f8492a1fd4db10abb8b9e8eeae2ee8db64261fa949616c52357d9ed",
+    "backend/app/evidence.py": "0d42dc528495c15d00af33cd6e2447404ed3ee3e64c9b1172a6f9e14140e9844",
+    "backend/app/wiki.py": "2bd02746b00480c82876e7bcffea71eac29b5595cf36b7096a2fdc78fca978ad",
+    "backend/app/skills.py": "ae161d03c348719952b282e59901950c81462423ec6db67377f2f673e6b768ab",
+    "backend/app/adapters/wsl.py": "52f0f5d5e7b57945fa4ade0046cb105fe9ae0131381150114d696110706c0780",
+    "backend/app/adapters/codex_appserver.py": "1621b97489dee1e6ef5f0af4fa179daba5be5580b59b861c5adea97baaf094ce",
+    "backend/app/workflows.py": "34d649500a07b117f16ee65a7bacc2d84547bdd489f90d477174085625eb09ab"
+  },
+  "baseline_checks": {
+    "existing_pytest_suite": {
+      "result": "PASS",
+      "test_count": 15,
+      "exit_code": 0,
+      "command": "backend/.venv/Scripts/python.exe -m pytest -q backend/tests --basetemp <fresh system temp directory>",
+      "environment": "AGENTPROJ_DATA_DIR redirected to isolated review import state"
+    },
+    "pytest_under_project_agentproj": {
+      "result": "FAIL",
+      "passed": 14,
+      "failed": 1,
+      "failed_test": "test_wiki_import_scope_and_denials",
+      "cause": "absolute ancestor .agentproj excluded from wiki scan; separately confirmed on default demo workspace"
+    },
+    "frontend_build": {
+      "result": "PASS",
+      "exit_code": 0,
+      "command": "npm.cmd run build",
+      "cwd": "ui",
+      "vite_version_observed": "7.3.7"
+    },
+    "delivered_code_manifest": {
+      "files_checked": 57,
+      "missing": [],
+      "changed": [
+        "README.md"
+      ],
+      "meaning": "reviewed application sources still match the delivered manifest; README has subsequent edits"
+    }
+  },
+  "assessment_status": "CHANGES_REQUIRED",
+  "recommended_next_delivery_status": "INCOMPLETE",
+  "original_execution_status": "PARTIAL_BLOCKED",
+  "findings": [
+    {
+      "id": "F01",
+      "priority": "P1",
+      "probe_ids": [
+        "late_review_overwrites_cancel",
+        "review_completes_despite_blocked_and_failed_checks"
+      ]
+    },
+    {
+      "id": "F02",
+      "priority": "P1",
+      "probe_ids": [
+        "wiki_scope_escape_and_wrong_body",
+        "wiki_demo_scan_excludes_ancestor"
+      ]
+    },
+    {
+      "id": "F03",
+      "priority": "P1",
+      "probe_ids": [
+        "budget_restart_double_count"
+      ]
+    },
+    {
+      "id": "F04",
+      "priority": "P1",
+      "probe_ids": [
+        "timeout_does_not_stop_native_turn",
+        "recovery_releases_unknown_ownership_slot"
+      ]
+    },
+    {
+      "id": "F05",
+      "priority": "P1",
+      "probe_ids": [
+        "multi_task_plan_always_first"
+      ]
+    },
+    {
+      "id": "F06",
+      "priority": "P1",
+      "probe_ids": [
+        "skill_revocation_and_delivery"
+      ]
+    },
+    {
+      "id": "F07",
+      "priority": "P1",
+      "probe_ids": [
+        "wsl_auto_distro_not_bound"
+      ]
+    }
+  ],
+  "probe_script_ref": ".agentproj/stage-review-20261015/probe_review.py",
+  "probe_script_sha256": "57975d839f95d010b81c6764147070f6818e504912e10a42735a42623169d589",
+  "probe_reproduction_note": "Original probe uses fixed isolated case folders. Preserve them as evidence; use a fresh BASE before rerunning to avoid reusing ledger keys."
+}

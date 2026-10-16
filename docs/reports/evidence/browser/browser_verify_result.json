@@ -1,0 +1,49 @@
+{
+ "url": "http://127.0.0.1:8787",
+ "chrome": "C:\\Users\\Administrator\\.agent-browser\\browsers\\chrome-155.0.8059.39\\chrome.exe",
+ "steps": [
+  {
+   "id": "A01",
+   "title": "agentProj 工作台",
+   "hasBrand": true,
+   "hasTokenOK": true
+  },
+  {
+   "id": "UI-create",
+   "goalTitle": "浏览器验收 20:26:03",
+   "listed": true
+  },
+  {
+   "id": "UI-run",
+   "finalStatusOnPage": "COMPLETED"
+  },
+  {
+   "id": "A11",
+   "before": {
+    "goalId": "goal_da0c5f202b45",
+    "runs": 2,
+    "status": "COMPLETED"
+   },
+   "after": {
+    "goalId": "goal_da0c5f202b45",
+    "runs": 2,
+    "status": "COMPLETED"
+   },
+   "noExtraRuns": true
+  }
+ ],
+ "screenshots": [
+  "docs\\reports\\evidence\\browser\\a01_dashboard.png",
+  "docs\\reports\\evidence\\browser\\a02_goal_created.png",
+  "docs\\reports\\evidence\\browser\\a03_planned.png",
+  "docs\\reports\\evidence\\browser\\a04_completed.png",
+  "docs\\reports\\evidence\\browser\\a05_evidence_expanded.png",
+  "docs\\reports\\evidence\\browser\\a06_after_refresh.png",
+  "docs\\reports\\evidence\\browser\\a07_skills.png",
+  "docs\\reports\\evidence\\browser\\a08_wiki.png",
+  "docs\\reports\\evidence\\browser\\a09_reports.png",
+  "docs\\reports\\evidence\\browser\\a10_env.png"
+ ],
+ "ok": true,
+ "pageErrors": []
+}

@@ -1,0 +1,90 @@
+{
+ "turns": [
+  {
+   "id": "T1-new-thread-A(history)",
+   "thread_id": "01a1413f-5536-7d20-83c7-52831ed9c37a",
+   "final_message": "OK",
+   "turn_count": 4
+  },
+  {
+   "id": "T2-new-thread-B(history)",
+   "thread_id": "01a1413f-6891-7f82-935c-3a8564f9c72b",
+   "final_message": "UNKNOWN",
+   "turn_count": 1,
+   "isolation_ok": true
+  },
+  {
+   "id": "T3-resume-A",
+   "thread_id": "01a1413f-5536-7d20-83c7-52831ed9c37a",
+   "status": "completed",
+   "final_message": "ALPHA-7",
+   "resume_ok": true
+  },
+  {
+   "id": "T4-effort-switch",
+   "thread_id": "01a1413f-5536-7d20-83c7-52831ed9c37a",
+   "effort_after": "medium",
+   "status": "completed",
+   "final_message": "ALPHA-7",
+   "history_kept": true
+  }
+ ],
+ "history_a": [
+  {
+   "turn_id": "01a14140-9cd8-7b91-87dd-80284b2821e5",
+   "status": "completed",
+   "agent_messages": [
+    "ALPHA-7"
+   ],
+   "user_messages": [
+    "再确认一次暗号，只回复那一个词。"
+   ]
+  },
+  {
+   "turn_id": "01a14140-8e80-7750-8949-7f212f8f34fd",
+   "status": "completed",
+   "agent_messages": [
+    "ALPHA-7"
+   ],
+   "user_messages": [
+    "把你记住的暗号回复给我，只回复那一个词。"
+   ]
+  },
+  {
+   "turn_id": "01a1413f-d2c3-7662-8da3-a66bb6db0a05",
+   "status": "interrupted",
+   "agent_messages": [],
+   "user_messages": []
+  },
+  {
+   "turn_id": "01a1413f-55e5-7033-bea1-9a410a674b62",
+   "status": "completed",
+   "agent_messages": [
+    "OK"
+   ],
+   "user_messages": [
+    "记住这个暗号：ALPHA-7。只回复 OK 两个字母。"
+   ]
+  }
+ ],
+ "history_b": [
+  {
+   "turn_id": "01a1413f-694b-72a2-bb1f-0b0d1699886f",
+   "status": "completed",
+   "agent_messages": [
+    "UNKNOWN"
+   ],
+   "user_messages": [
+    "我刚才告诉你的暗号是什么？如果你不知道，只回复 UNKNOWN。"
+   ]
+  }
+ ],
+ "checks": {
+  "t1_completed_or_recorded": true,
+  "threads_distinct": true,
+  "isolation_ok": true,
+  "resume_ok": true,
+  "history_kept_after_effort_switch": true
+ },
+ "all_pass": true
+}

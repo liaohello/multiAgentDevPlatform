@@ -1,0 +1,292 @@
+{
+  "date": "2026-10-15",
+  "timezone": "America/Los_Angeles",
+  "original_file_count": 29,
+  "duplicate_file_count": 12,
+  "unique_original_file_count": 17,
+  "backup": "docs/archive/2026-10-15-originals.zip",
+  "backup_sha256": "10713e88c5a07512937a76157b42a351c0c3ac1514648eb7b71157c792f09256",
+  "original_files": [
+    {
+      "path": "Install-AgentProjMemory.ps1",
+      "size_bytes": 3708,
+      "sha256": "693b844c132394e3a29732b7bef0c5332292b017888e84c04342e99766b3fb16"
+    },
+    {
+      "path": "OPS_CAPABILITY_DESIGN_20261015.md",
+      "size_bytes": 13588,
+      "sha256": "1ea38cfa9297e12ad336da001ce19ca25c1b298a47c479f5970a08a6a88bbb73"
+    },
+    {
+      "path": "payload-manifest.json",
+      "size_bytes": 2433,
+      "sha256": "f41a0c172ba712c561c69b7fb39b702177ebe5e0f8b1fb12df023ec73ebfc16d"
+    },
+    {
+      "path": "README_AGENTPROJ_MEMORY_20261015.md",
+      "size_bytes": 1710,
+      "sha256": "7e558cebc4a864a206fa2b9484dae51e43a07d77946294adfc7ceb0ce66c9281"
+    },
+    {
+      "path": "README_FIRST.md",
+      "size_bytes": 1904,
+      "sha256": "d8910abafe7182e9d580a8b52b49693390149687e4d792e2a9b9db373cdb8e12"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "size_bytes": 1849,
+      "sha256": "a3b898a964c384b9dd8179fd7ad120116487c00c8fe780f466afc846c56a1710"
+    },
+    {
+      "path": "agentProj/README_AGENTPROJ_MEMORY_20261015.md",
+      "size_bytes": 1710,
+      "sha256": "7e558cebc4a864a206fa2b9484dae51e43a07d77946294adfc7ceb0ce66c9281"
+    },
+    {
+      "path": "agentProj/docs/discussion-memory-2026-10-15/CODEX_HANDOFF.md",
+      "size_bytes": 3007,
+      "sha256": "edac13b9adf588ac7fcfcf440b236bc9df260ecf194d64f66c4c8195203bffed"
+    },
+    {
+      "path": "agentProj/docs/discussion-memory-2026-10-15/DATA_CONTRACTS.md",
+      "size_bytes": 5849,
+      "sha256": "bbae736a1c376635a00f69baa8c709c942d3caf340ab6e492edd331df2221153"
+    },
+    {
+      "path": "agentProj/docs/discussion-memory-2026-10-15/DECISIONS_AND_OPEN_QUESTIONS.md",
+      "size_bytes": 5054,
+      "sha256": "df9fbb3a8baba1c9dbc3546c8b8e8586611564fd74240d5dba1d623bb819d48f"
+    },
+    {
+      "path": "agentProj/docs/discussion-memory-2026-10-15/IMPLEMENTATION_PLAN.md",
+      "size_bytes": 4318,
+      "sha256": "ac14472f867a5a32396535b1f8cef7f9d0ced2668b1d4a9cf9b0d38778f85839"
+    },
+    {
+      "path": "agentProj/docs/discussion-memory-2026-10-15/MEMORY_INDEX.json",
+      "size_bytes": 2462,
+      "sha256": "775e80a7fc192587677559ebd6bb905aac50d3320f61e1ebbd00b5e13ab3b7ea"
+    },
+    {
+      "path": "agentProj/docs/discussion-memory-2026-10-15/PROJECT_MEMORY.md",
+      "size_bytes": 15583,
+      "sha256": "c5223ee935e3eb73a2606948c2f81fefe9a428d535a1ee1a71ec2118ec782600"
+    },
+    {
+      "path": "agentProj/docs/discussion-memory-2026-10-15/SKILL_CANDIDATES.md",
+      "size_bytes": 3489,
+      "sha256": "23f8046b381354228562ce5229d80dccb34bac33b04bfc6d7068a73edc57930b"
+    },
+    {
+      "path": "agentProj/docs/discussion-memory-2026-10-15/SOURCE_AND_DELIVERY.md",
+      "size_bytes": 2181,
+      "sha256": "e73c18f2c28e75884375524b515f7900662cbb922bbf275f0bb9e13e86989355"
+    },
+    {
+      "path": "agentProj/docs/discussion-memory-2026-10-15/examples/decision-trace.example.json",
+      "size_bytes": 1182,
+      "sha256": "29b0d13b7b5391a9be768c82e1aca802072518f541baf181993cfdda7b2f00c2"
+    },
+    {
+      "path": "agentProj/docs/discussion-memory-2026-10-15/examples/goal.example.json",
+      "size_bytes": 1351,
+      "sha256": "e5f67979fc3ea950431017afd48673dfc19afa9f48165341148df6d5a81958e4"
+    },
+    {
+      "path": "agentProj/docs/discussion-memory-2026-10-15/examples/session.example.json",
+      "size_bytes": 672,
+      "sha256": "5ab137e710c2e9511bd22ea3672fd4282a2ff256504e6768b178c32e172cdbd6"
+    },
+    {
+      "path": "docs/discussion-memory-2026-10-15/CODEX_HANDOFF.md",
+      "size_bytes": 3007,
+      "sha256": "edac13b9adf588ac7fcfcf440b236bc9df260ecf194d64f66c4c8195203bffed"
+    },
+    {
+      "path": "docs/discussion-memory-2026-10-15/DATA_CONTRACTS.md",
+      "size_bytes": 5849,
+      "sha256": "bbae736a1c376635a00f69baa8c709c942d3caf340ab6e492edd331df2221153"
+    },
+    {
+      "path": "docs/discussion-memory-2026-10-15/DECISIONS_AND_OPEN_QUESTIONS.md",
+      "size_bytes": 5054,
+      "sha256": "df9fbb3a8baba1c9dbc3546c8b8e8586611564fd74240d5dba1d623bb819d48f"
+    },
+    {
+      "path": "docs/discussion-memory-2026-10-15/IMPLEMENTATION_PLAN.md",
+      "size_bytes": 4318,
+      "sha256": "ac14472f867a5a32396535b1f8cef7f9d0ced2668b1d4a9cf9b0d38778f85839"
+    },
+    {
+      "path": "docs/discussion-memory-2026-10-15/MEMORY_INDEX.json",
+      "size_bytes": 2462,
+      "sha256": "775e80a7fc192587677559ebd6bb905aac50d3320f61e1ebbd00b5e13ab3b7ea"
+    },
+    {
+      "path": "docs/discussion-memory-2026-10-15/PROJECT_MEMORY.md",
+      "size_bytes": 15583,
+      "sha256": "c5223ee935e3eb73a2606948c2f81fefe9a428d535a1ee1a71ec2118ec782600"
+    },
+    {
+      "path": "docs/discussion-memory-2026-10-15/SKILL_CANDIDATES.md",
+      "size_bytes": 3489,
+      "sha256": "23f8046b381354228562ce5229d80dccb34bac33b04bfc6d7068a73edc57930b"
+    },
+    {
+      "path": "docs/discussion-memory-2026-10-15/SOURCE_AND_DELIVERY.md",
+      "size_bytes": 2181,
+      "sha256": "e73c18f2c28e75884375524b515f7900662cbb922bbf275f0bb9e13e86989355"
+    },
+    {
+      "path": "docs/discussion-memory-2026-10-15/examples/decision-trace.example.json",
+      "size_bytes": 1182,
+      "sha256": "29b0d13b7b5391a9be768c82e1aca802072518f541baf181993cfdda7b2f00c2"
+    },
+    {
+      "path": "docs/discussion-memory-2026-10-15/examples/goal.example.json",
+      "size_bytes": 1351,
+      "sha256": "e5f67979fc3ea950431017afd48673dfc19afa9f48165341148df6d5a81958e4"
+    },
+    {
+      "path": "docs/discussion-memory-2026-10-15/examples/session.example.json",
+      "size_bytes": 672,
+      "sha256": "5ab137e710c2e9511bd22ea3672fd4282a2ff256504e6768b178c32e172cdbd6"
+    }
+  ],
+  "duplicate_mappings": [
+    {
+      "removed": "agentProj/README_AGENTPROJ_MEMORY_20261015.md",
+      "canonical_before_move": "README_AGENTPROJ_MEMORY_20261015.md",
+      "sha256": "7e558cebc4a864a206fa2b9484dae51e43a07d77946294adfc7ceb0ce66c9281"
+    },
+    {
+      "removed": "agentProj/docs/discussion-memory-2026-10-15/CODEX_HANDOFF.md",
+      "canonical_before_move": "docs/discussion-memory-2026-10-15/CODEX_HANDOFF.md",
+      "sha256": "edac13b9adf588ac7fcfcf440b236bc9df260ecf194d64f66c4c8195203bffed"
+    },
+    {
+      "removed": "agentProj/docs/discussion-memory-2026-10-15/DATA_CONTRACTS.md",
+      "canonical_before_move": "docs/discussion-memory-2026-10-15/DATA_CONTRACTS.md",
+      "sha256": "bbae736a1c376635a00f69baa8c709c942d3caf340ab6e492edd331df2221153"
+    },
+    {
+      "removed": "agentProj/docs/discussion-memory-2026-10-15/DECISIONS_AND_OPEN_QUESTIONS.md",
+      "canonical_before_move": "docs/discussion-memory-2026-10-15/DECISIONS_AND_OPEN_QUESTIONS.md",
+      "sha256": "df9fbb3a8baba1c9dbc3546c8b8e8586611564fd74240d5dba1d623bb819d48f"
+    },
+    {
+      "removed": "agentProj/docs/discussion-memory-2026-10-15/IMPLEMENTATION_PLAN.md",
+      "canonical_before_move": "docs/discussion-memory-2026-10-15/IMPLEMENTATION_PLAN.md",
+      "sha256": "ac14472f867a5a32396535b1f8cef7f9d0ced2668b1d4a9cf9b0d38778f85839"
+    },
+    {
+      "removed": "agentProj/docs/discussion-memory-2026-10-15/MEMORY_INDEX.json",
+      "canonical_before_move": "docs/discussion-memory-2026-10-15/MEMORY_INDEX.json",
+      "sha256": "775e80a7fc192587677559ebd6bb905aac50d3320f61e1ebbd00b5e13ab3b7ea"
+    },
+    {
+      "removed": "agentProj/docs/discussion-memory-2026-10-15/PROJECT_MEMORY.md",
+      "canonical_before_move": "docs/discussion-memory-2026-10-15/PROJECT_MEMORY.md",
+      "sha256": "c5223ee935e3eb73a2606948c2f81fefe9a428d535a1ee1a71ec2118ec782600"
+    },
+    {
+      "removed": "agentProj/docs/discussion-memory-2026-10-15/SKILL_CANDIDATES.md",
+      "canonical_before_move": "docs/discussion-memory-2026-10-15/SKILL_CANDIDATES.md",
+      "sha256": "23f8046b381354228562ce5229d80dccb34bac33b04bfc6d7068a73edc57930b"
+    },
+    {
+      "removed": "agentProj/docs/discussion-memory-2026-10-15/SOURCE_AND_DELIVERY.md",
+      "canonical_before_move": "docs/discussion-memory-2026-10-15/SOURCE_AND_DELIVERY.md",
+      "sha256": "e73c18f2c28e75884375524b515f7900662cbb922bbf275f0bb9e13e86989355"
+    },
+    {
+      "removed": "agentProj/docs/discussion-memory-2026-10-15/examples/decision-trace.example.json",
+      "canonical_before_move": "docs/discussion-memory-2026-10-15/examples/decision-trace.example.json",
+      "sha256": "29b0d13b7b5391a9be768c82e1aca802072518f541baf181993cfdda7b2f00c2"
+    },
+    {
+      "removed": "agentProj/docs/discussion-memory-2026-10-15/examples/goal.example.json",
+      "canonical_before_move": "docs/discussion-memory-2026-10-15/examples/goal.example.json",
+      "sha256": "e5f67979fc3ea950431017afd48673dfc19afa9f48165341148df6d5a81958e4"
+    },
+    {
+      "removed": "agentProj/docs/discussion-memory-2026-10-15/examples/session.example.json",
+      "canonical_before_move": "docs/discussion-memory-2026-10-15/examples/session.example.json",
+      "sha256": "5ab137e710c2e9511bd22ea3672fd4282a2ff256504e6768b178c32e172cdbd6"
+    }
+  ],
+  "moves": [
+    {
+      "to": "docs/design/WORKBENCH_DESIGN.md",
+      "from": "docs/discussion-memory-2026-10-15/PROJECT_MEMORY.md"
+    },
+    {
+      "to": "docs/design/DATA_CONTRACTS.md",
+      "from": "docs/discussion-memory-2026-10-15/DATA_CONTRACTS.md"
+    },
+    {
+      "to": "docs/design/DECISIONS_AND_OPEN_QUESTIONS.md",
+      "from": "docs/discussion-memory-2026-10-15/DECISIONS_AND_OPEN_QUESTIONS.md"
+    },
+    {
+      "to": "docs/design/IMPLEMENTATION_PLAN.md",
+      "from": "docs/discussion-memory-2026-10-15/IMPLEMENTATION_PLAN.md"
+    },
+    {
+      "to": "docs/references/SKILL_CANDIDATES.md",
+      "from": "docs/discussion-memory-2026-10-15/SKILL_CANDIDATES.md"
+    },
+    {
+      "to": "docs/CODEX_HANDOFF.md",
+      "from": "docs/discussion-memory-2026-10-15/CODEX_HANDOFF.md"
+    },
+    {
+      "to": "docs/SOURCES_AND_STATUS.md",
+      "from": "docs/discussion-memory-2026-10-15/SOURCE_AND_DELIVERY.md"
+    },
+    {
+      "to": "docs/wiki/INDEX.json",
+      "from": "docs/discussion-memory-2026-10-15/MEMORY_INDEX.json"
+    },
+    {
+      "to": "docs/examples/goal.example.json",
+      "from": "docs/discussion-memory-2026-10-15/examples/goal.example.json"
+    },
+    {
+      "to": "docs/examples/session.example.json",
+      "from": "docs/discussion-memory-2026-10-15/examples/session.example.json"
+    },
+    {
+      "to": "docs/examples/decision-trace.example.json",
+      "from": "docs/discussion-memory-2026-10-15/examples/decision-trace.example.json"
+    },
+    {
+      "to": "docs/design/OPS_CAPABILITY_DESIGN.md",
+      "from": "OPS_CAPABILITY_DESIGN_20261015.md"
+    }
+  ],
+  "archive_only": [
+    "README_FIRST.md",
+    "README_AGENTPROJ_MEMORY_20261015.md",
+    "Install-AgentProjMemory.ps1",
+    "payload-manifest.json",
+    "SHA256SUMS.txt"
+  ],
+  "validation": {
+    "date": "2026-10-15",
+    "timezone": "America/Los_Angeles",
+    "result": "PASS",
+    "markdown_files": 18,
+    "json_files": 5,
+    "local_links_checked": 97,
+    "indexed_documents": 23,
+    "task_routes": 9,
+    "verified_backup_files": 17,
+    "exact_duplicates_removed": 12,
+    "example_files_unchanged": 3,
+    "raw_source_sha256": "86ec98e588c9cdcbac3b3c848b1811c108e489c225431c9dd3bacf40f7d46a23",
+    "conversation_meaningful_lines_missing": 0,
+    "active_duplicate_groups": 0,
+    "errors": []
+  }
+}

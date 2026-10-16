@@ -1,0 +1,10 @@
+[1] start app-server + initialize …
+    OK thread_id=01a14141-8293-71b0-8bce-5a4f4815b1c3 (client ready in 0.6s)
+[!] sending native interrupt …
+[2] turn outcome: interrupted
+    final_message: (empty)
+    turn_id: 01a14141-834c-7f83-b70b-38b1a40084dc | duration_ms: 4995
+    error: None
+[3] transient deltas: 54 chars: 183
+[4] product events: []
+[static] {"thread_id": "01a14141-8293-71b0-8bce-5a4f4815b1c3", "turn_status": "interrupted", "turn_id": "01a14141-834c-7f83-b70b-38b1a40084dc", "final_message": "", "usage_total_tokens": null, "interrupted": true}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "example_only": true,
+  "workspace_id": "workspace-example",
+  "session_id": "sol-session-example",
+  "role": "planner_reviewer",
+  "environment": "windows",
+  "thread_id": null,
+  "model": {
+    "provider": null,
+    "model_id": null,
+    "reasoning_effort": null
+  },
+  "memory_policy": {
+    "inherit_other_sessions": false,
+    "imported_sources": [],
+    "global_retrieval": "explicit_authorization_only"
+  },
+  "skill_config": {
+    "revision": 1,
+    "profile_snapshot": null,
+    "enabled_skill_refs": [],
+    "next_turn_only": true
+  },
+  "observation_note": "Null backend fields are deliberately unresolved, not real configuration."
+}

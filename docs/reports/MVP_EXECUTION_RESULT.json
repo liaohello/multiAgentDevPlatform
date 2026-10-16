@@ -1,0 +1,87 @@
+{
+ "schema_version": "1.0",
+ "generated_at": "2026-10-15T21:05:00-07:00",
+ "generated_by": "WorkBuddy local agent (Windows), E0-E7 implementation",
+ "completion_status": "PARTIAL_BLOCKED",
+ "completion_status_reason": "All deliverables are runnable and verified except the real WSL Codex/DeepSeek execution leg, which is blocked by the host execution environment blacklisting wsl.exe (WinError 5). The real loop therefore did not pass; simulation results are not substituted for A02/A04.",
+ "code_revision_ref": "docs/reports/evidence/code_manifest.sha256.txt (57 files hashed; project is not a git repository)",
+ "report_path": "docs/reports/MVP_EXECUTION_REPORT.md",
+ "environment_report_path": "docs/reports/ENVIRONMENT_REPORT.md",
+ "launch_instructions_ref": "README.md (scripts/start_workbench.bat; http://127.0.0.1:8787)",
+ "real_loop_status": "BLOCKED",
+ "simulation_loop_status": "PASS",
+ "real_loop_detail": {
+  "windows_sol": "PASS - real handshake, real turns, real usage (thread snapshots); real goal planning recorded 15925 tokens (exactness=reported)",
+  "wsl_deepseek_worker": "BLOCKED - wsl.exe blocked by environment policy: [WinError 5]; adapter probe inside the product returns BLOCKED with the exact reason",
+  "real_goal_attempt": {
+   "goal_id": "goal_cc3f0c49052a",
+   "plan": "real Sol plan v1 (7 criteria, 3 tasks) applied by Python controller",
+   "start": "run_388e47d5ec35 FAILED (error_class=ADAPTER_BLOCKED); goal PAUSED",
+   "evidence": "docs/reports/evidence/a04/real_goal_attempt.json"
+  }
+ },
+ "acceptance": [
+  {"id": "A01", "status": "PASS", "mode": "command+browser", "evidence_refs": ["docs/reports/evidence/a01_start_stop_log.txt", "docs/reports/evidence/tests/ui_build_output.txt", "docs/reports/evidence/browser/a01_dashboard.png"], "note": "start/stop scripts verified; build+launch exit 0; health 200"},
+  {"id": "A02", "status": "BLOCKED", "mode": "real", "evidence_refs": ["docs/reports/evidence/e0/live_sol_minimal_turn.txt", "docs/reports/evidence/acceptance/server_acceptance.json"], "note": "Windows Sol real connection PASS (real turn PONG, 14557-token snapshot); WSL DeepSeek BLOCKED by wsl.exe policy; not replaced by simulation"},
+  {"id": "A03", "status": "PASS", "mode": "real", "evidence_refs": ["docs/reports/evidence/e0/a03_session_isolation_resume_effort.json"], "note": "isolation (UNKNOWN), cross-process resume (ALPHA-7), effort switch keeps history (ALPHA-7)"},
+  {"id": "A04", "status": "BLOCKED", "mode": "real", "evidence_refs": ["docs/reports/evidence/a04/real_goal_attempt.json"], "note": "real planning executed and recorded; worker leg ADAPTER_BLOCKED; full real loop not passed"},
+  {"id": "A05", "status": "PASS", "mode": "simulation", "evidence_refs": ["docs/reports/evidence/tests/pytest_output.txt", "docs/reports/evidence/browser/a04_completed.png"], "note": "deterministic fail->replan->fix->review->complete with real subprocess test evidence, tagged simulation"},
+  {"id": "A06", "status": "PASS", "mode": "simulation", "evidence_refs": ["backend/tests/test_evidence_and_review.py"], "note": "snapshot drift blocks completion; PASS without evidence downgraded to UNKNOWN"},
+  {"id": "A07", "status": "PASS", "mode": "simulation", "evidence_refs": ["docs/reports/evidence/acceptance/server_acceptance.json"], "note": "gate closed at 100% (persisted), review admission rejected, 409 on start/resume, restart keeps lock, explicit resume with adjusted budget completes"},
+  {"id": "A08", "status": "PASS", "mode": "simulation+real-split", "evidence_refs": ["backend/tests/test_budget.py", "docs/reports/evidence/acceptance/server_acceptance.json"], "note": "dedupe of repeated snapshots; reset observed as unknown; reported vs simulated split shown"},
+  {"id": "A09", "status": "PASS", "mode": "simulation+http", "evidence_refs": ["docs/reports/evidence/acceptance/server_acceptance.json", "backend/tests/test_run_lifecycle.py"], "note": "duplicate idempotency key -> same run, count 1; active-run conflict 409; crash recovery INTERRUPTED without re-dispatch"},
+  {"id": "A10", "status": "PASS", "mode": "simulation+real", "evidence_refs": ["docs/reports/evidence/e0/a10_native_interrupt.txt", "backend/tests/test_run_lifecycle.py"], "note": "product cancel -> INTERRUPTED only for that run; real native turn/interrupt -> interrupted (~5.0s)"},
+  {"id": "A11", "status": "PASS", "mode": "browser", "evidence_refs": ["docs/reports/evidence/browser/browser_verify_result.json", "docs/reports/evidence/browser/a06_after_refresh.png"], "note": "refresh: runs 2 -> 2, cursor-based SSE resumes without extra runs"},
+  {"id": "A12", "status": "PASS", "mode": "simulation+http", "evidence_refs": ["backend/tests/test_skills_wiki.py", "docs/reports/evidence/browser/a07_skills.png"], "note": "registry/allow/session-select/run-freeze recorded; config never claimed as invocation; native runtime isolation NOT verified (documented limitation)"},
+  {"id": "A13", "status": "PASS", "mode": "simulation+http", "evidence_refs": ["backend/tests/test_skills_wiki.py", "docs/reports/evidence/browser/a08_wiki.png"], "note": "import hash+scope recorded; cross-workspace body read and path escape denied before reading (wiki.denied events)"},
+  {"id": "A14", "status": "PASS", "mode": "simulation", "evidence_refs": ["docs/reports/evidence/acceptance/a14_postmortem.md", "docs/reports/evidence/acceptance/a14_token_audit.md", "docs/reports/evidence/acceptance/a14_optimize.md"], "note": "four workflows usable; postmortem cites decision->run->review chain; token audit reads existing usage facts only"},
+  {"id": "A15", "status": "PASS", "mode": "simulation+http", "evidence_refs": ["docs/reports/evidence/acceptance/server_acceptance.json", "backend/tests/test_auth_and_privacy.py"], "note": "401/401/403/200 boundary; no reasoning/credentials in persisted data; loopback-only binding"}
+ ],
+ "tests": {
+  "command": "backend\\.venv\\Scripts\\python.exe -m pytest",
+  "cwd": "backend/",
+  "exit_code": 0,
+  "summary": "15 passed, 1 warning in 50.74s",
+  "output_ref": "docs/reports/evidence/tests/pytest_output.txt",
+  "skipped_or_not_run": [
+   "WSL-side path mapping verification (wsl.exe blocked)",
+   "WSL residual process check after interrupt (wsl.exe blocked)",
+   "native runtime skill isolation (WSL side unavailable)"
+  ]
+ },
+ "demo_goal_refs": {
+  "simulation_demo_goal": "goal_275e60318bf4 (budget scenario, COMPLETED) and browser-created simulation goals; full bundles in docs/reports/evidence/acceptance/a07_budget_goal_bundle.json",
+  "real_goal": "goal_cc3f0c49052a (plan PASS / worker BLOCKED)"
+ },
+ "design_deviations": [
+  "Launcher runs backend in foreground (window close stops service) because sandboxed sessions reap detached children; equivalent and more robust for users",
+  "Default codex binary is the desktop native codex.exe 0.162.0-alpha.17.2 (schema generated from it); npm wrapper 0.153.4 remains selectable via AGENTPROJ_CODEX_BIN",
+  "outputSchema uses OpenAI strict mode plus a single bounded schema-less retry when a runtime rejects the schema",
+  "Skill native-runtime isolation is not verified; configured/provided/unknown are recorded honestly and no isolation claim is made in UI/report",
+  "Review applies a stronger apply-time snapshot recomputation before completion",
+  "Deterministic rule-based implementations for simulated workflows; model-based analysis only in real mode within budget admission"
+ ],
+ "blockers": [
+  {
+   "id": "BLK-1",
+   "summary": "wsl.exe blocked by host execution policy (PROGRAM BLOCKED BY SECURITY POLICY / WinError 5), preventing WSL Codex/DeepSeek worker execution, WSL path-mapping verification, native skill isolation checks and residual-process checks",
+   "evidence": ["docs/reports/evidence/e0/wsl_blocked.evidence.txt", "docs/reports/evidence/a04/real_goal_attempt.json"],
+   "unblock": "Remove wsl.exe from Security Center -> Command Security -> Program Blacklist (or run on an unrestricted host), then re-run backend/scripts/live_real_goal.py and create a real goal in the UI"
+  },
+  {
+   "id": "BLK-2",
+   "summary": "WSL-side Codex/DeepSeek configuration and login state unknown (credentials intentionally not inspected)",
+   "evidence": ["docs/reports/ENVIRONMENT_REPORT.md"],
+   "unblock": "User confirms codex works inside the distro with the DeepSeek provider per the official integration guide"
+  }
+ ],
+ "remaining_work": [
+  "Re-run the real loop after wsl.exe is unblocked; expect A02/A04 to become PASS and PARTIAL_BLOCKED to move to COMPLETE if nothing else regresses",
+  "Optionally verify native skill isolation via skills/list inside the runtime (code path exists: skills.record_observed)",
+  "Optional: desktop shell, multi-worker worktrees, SSH/CI - out of first-version scope"
+ ],
+ "notes": {
+  "quota": "Real calls used only the existing ChatGPT login with minimal turns (approx. 10 turns; 14557 tokens per PONG turn; 15925 tokens recorded for the real planning turn; no explicit budget ceiling was provided, none was invented)",
+  "privacy": "No credentials, hidden reasoning, or raw protocol dumps are stored in the database, logs, wiki or reports"
+ }
+}

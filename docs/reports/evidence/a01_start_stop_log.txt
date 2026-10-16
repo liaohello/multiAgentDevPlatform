@@ -1,0 +1,29 @@
+# A01 启动/停止脚本实测记录
+
+## 1. 前端构建（npm run build）
+命令目录: ui/
+结果: exit 0；tsc 无错误；vite 产物 index.html 0.47kB / index-CI-bV-E2.css 7.01kB / index-C6LIBohY.js 254.99kB
+完整输出: docs/reports/evidence/tests/ui_build_output.txt
+
+## 2. 启动（scripts\start_workbench.bat）
+脚本流程输出（摘要）:
+  [1/3] checking frontend build...        （dist 已存在，跳过构建）
+  [2/3] preparing backend python env...   （.venv 已存在，跳过安装）
+  [3/3] starting backend on http://127.0.0.1:8787 (close this window to stop)
+健康检查（直连 127.0.0.1，环境已设 NO_PROXY）:
+  SERVER UP via start_workbench.bat: {"status":"ok","version":"1.0.0","data_dir":"C:\\Users\\Administrator\\Desktop\\tool\\agentProj\\.agentproj","modes":["real","simulation"]}
+页面令牌注入:
+  page token injected: True
+
+## 3. 停止（scripts\stop_workbench.bat）
+输出:
+  stopping pid 22060 ...
+  成功: 已终止 PID 22060 (属于 PID 20332 子进程)的进程。
+停止后健康检查:
+  SERVER STOPPED via stop_workbench.bat: URLError <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+## 4. 说明
+- 本执行会话带进程回收策略：`start /min` 形式的游离子进程会在父任务结束时被回收，
+  故交付脚本采用前台运行模式（关闭窗口/Ctrl+C 即停止），对最终用户等价且更稳健。
+- 环境变量 HTTP_PROXY 指向沙箱代理，直接调用 127.0.0.1 需设置 NO_PROXY（仅影响本测试会话，
+  不影响用户浏览器与产品本身）。

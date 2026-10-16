@@ -1,0 +1,1220 @@
+{
+  "schema_version": 2,
+  "kind": "project_design_wiki",
+  "project": "agentProj",
+  "updated_at": "2026-10-15",
+  "timezone": "America/Los_Angeles",
+  "path_base": "project_root",
+  "project_root": "C:\\Users\\Administrator\\Desktop\\tool\\agentProj",
+  "status": {
+    "documentation": "organized_locally",
+    "windows_target": "written_directly",
+    "application": "runnable_mvp_changes_required_after_independent_review",
+    "examples": "simulated",
+    "third_party": "selected_public_sources_verified_no_installation_or_runtime_validation",
+    "memory_scope": "local_project_files",
+    "design": "local_web_confirmed_implementation_handoff_prepared",
+    "handoff": "executed_by_local_agent_reports_returned_for_review",
+    "implementation": "existing 15 tests and frontend build pass; new counterexamples invalidate full reliability acceptance",
+    "stage_review": "CHANGES_REQUIRED; seven P1 findings supported by ten isolated probe groups; WSL remains blocked"
+  },
+  "reading_policy": {
+    "entry": "AGENTS.md",
+    "first_read": [
+      "MEMORY.md",
+      "WIKI.md"
+    ],
+    "strategy": "match task tags and summary, read selected design and needed related documents",
+    "read_full_library_by_default": false,
+    "cross_workspace_body_read": "explicit_user_authorization_required",
+    "archive_default_read": false
+  },
+  "task_routes": [
+    {
+      "keywords": [
+        "阶段评估",
+        "执行结果审阅",
+        "可靠性",
+        "反例",
+        "修复优先级"
+      ],
+      "primary_ids": [
+        "stage_review"
+      ],
+      "support_ids": [
+        "stage_review_evidence",
+        "mvp_report",
+        "plan"
+      ]
+    },
+    {
+      "keywords": [
+        "前端重设计",
+        "PPT布局",
+        "会话Dashboard",
+        "执行时间线",
+        "异常恢复"
+      ],
+      "primary_ids": [
+        "architecture"
+      ],
+      "support_ids": [
+        "decisions",
+        "contracts",
+        "budget"
+      ]
+    },
+    {
+      "keywords": [
+        "实现结果",
+        "报告",
+        "验收证据",
+        "启动工作台",
+        "A01",
+        "A15",
+        "PARTIAL_BLOCKED",
+        "真实闭环"
+      ],
+      "primary_ids": [
+        "mvp_report",
+        "result_json"
+      ],
+      "support_ids": [
+        "env_report",
+        "readme",
+        "evidence_index"
+      ]
+    },
+    {
+      "keywords": [
+        "实施",
+        "执行提示词",
+        "交给Agent",
+        "Web MVP"
+      ],
+      "primary_ids": [
+        "handoff",
+        "plan"
+      ],
+      "support_ids": [
+        "report_template",
+        "architecture",
+        "contracts"
+      ]
+    },
+    {
+      "keywords": [
+        "执行结果",
+        "反馈",
+        "报告",
+        "A01",
+        "A15"
+      ],
+      "primary_ids": [
+        "report_template"
+      ],
+      "support_ids": [
+        "plan",
+        "handoff_validation"
+      ]
+    },
+    {
+      "keywords": [
+        "完整设计",
+        "综合方案",
+        "技术栈",
+        "架构取舍"
+      ],
+      "primary_ids": [
+        "architecture"
+      ],
+      "support_ids": [
+        "research",
+        "review",
+        "contracts"
+      ]
+    },
+    {
+      "keywords": [
+        "参考项目",
+        "GitHub",
+        "调研",
+        "实际来源"
+      ],
+      "primary_ids": [
+        "research"
+      ],
+      "support_ids": [
+        "research_evidence",
+        "candidates"
+      ]
+    },
+    {
+      "keywords": [
+        "讨论",
+        "审阅",
+        "采纳",
+        "取舍"
+      ],
+      "primary_ids": [
+        "review"
+      ],
+      "support_ids": [
+        "architecture",
+        "decisions"
+      ]
+    },
+    {
+      "keywords": [
+        "架构",
+        "会话",
+        "记忆隔离",
+        "Sol",
+        "DeepSeek"
+      ],
+      "primary_ids": [
+        "architecture"
+      ],
+      "support_ids": [
+        "decisions"
+      ]
+    },
+    {
+      "keywords": [
+        "Registry",
+        "Profile",
+        "Skill Manager",
+        "单轮调用"
+      ],
+      "primary_ids": [
+        "skills"
+      ],
+      "support_ids": [
+        "candidates",
+        "contracts"
+      ]
+    },
+    {
+      "keywords": [
+        "Prompt",
+        "验收",
+        "复盘",
+        "Postmortem",
+        "Token Audit"
+      ],
+      "primary_ids": [
+        "lifecycle"
+      ],
+      "support_ids": [
+        "contracts",
+        "budget"
+      ]
+    },
+    {
+      "keywords": [
+        "预算",
+        "Token",
+        "100%",
+        "恢复",
+        "费用"
+      ],
+      "primary_ids": [
+        "budget"
+      ],
+      "support_ids": [
+        "contracts"
+      ]
+    },
+    {
+      "keywords": [
+        "Ops",
+        "Adapter",
+        "Trace",
+        "Handoffs",
+        "SSH"
+      ],
+      "primary_ids": [
+        "ops"
+      ],
+      "support_ids": [
+        "contracts",
+        "budget"
+      ]
+    },
+    {
+      "keywords": [
+        "数据",
+        "协议",
+        "事件",
+        "JSON",
+        "Evidence",
+        "Run"
+      ],
+      "primary_ids": [
+        "contracts"
+      ],
+      "support_ids": [
+        "goal_example",
+        "trace_example"
+      ]
+    },
+    {
+      "keywords": [
+        "已确认",
+        "建议",
+        "待定",
+        "冲突"
+      ],
+      "primary_ids": [
+        "decisions"
+      ],
+      "support_ids": [
+        "status"
+      ]
+    },
+    {
+      "keywords": [
+        "实施",
+        "里程碑",
+        "先做什么",
+        "模拟重放"
+      ],
+      "primary_ids": [
+        "plan"
+      ],
+      "support_ids": [
+        "contracts",
+        "handoff"
+      ]
+    },
+    {
+      "keywords": [
+        "原文",
+        "来源",
+        "对话"
+      ],
+      "primary_ids": [
+        "conversation",
+        "status"
+      ],
+      "support_ids": [
+        "raw_source"
+      ]
+    }
+  ],
+  "canonical_skill_ids": [
+    "prompt-optimizer",
+    "goal-review",
+    "goal-collaboration-postmortem",
+    "token-audit"
+  ],
+  "skill_aliases": {
+    "Session Postmortem": "goal-collaboration-postmortem",
+    "Goal Execution Postmortem": "goal-collaboration-postmortem",
+    "Goal Postmortem": "goal-collaboration-postmortem",
+    "goal-postmortem": "goal-collaboration-postmortem"
+  },
+  "documents": [
+    {
+      "id": "instructions",
+      "path": "AGENTS.md",
+      "title": "项目阅读约定",
+      "summary": "进入项目时读取短记忆和 Wiki，按任务选专题，维护来源和状态。",
+      "tags": [
+        "入口",
+        "模型读取",
+        "AGENTS"
+      ],
+      "kind": "instruction",
+      "status": "local_document",
+      "related_ids": [
+        "memory",
+        "wiki"
+      ],
+      "source_refs": [],
+      "default_read": false
+    },
+    {
+      "id": "readme",
+      "path": "README.md",
+      "title": "项目入口",
+      "summary": "已实现工作台的安装/启动/测试/停止、两种模式与行为说明；含状态摘要。",
+      "tags": [
+        "入口",
+        "目录"
+      ],
+      "kind": "entry",
+      "status": "implementation_readme",
+      "related_ids": [
+        "memory",
+        "wiki",
+        "organization"
+      ],
+      "source_refs": [],
+      "default_read": false
+    },
+    {
+      "id": "memory",
+      "path": "MEMORY.md",
+      "title": "项目长期记忆",
+      "summary": "当前原型、前端重设计需求、独立阶段审查的可靠性缺陷与下一轮优先事项。",
+      "tags": [
+        "记忆",
+        "目标",
+        "状态",
+        "约束",
+        "前端重设计",
+        "会话Dashboard",
+        "执行时间线",
+        "异常恢复",
+        "R20"
+      ],
+      "kind": "memory",
+      "status": "local_document",
+      "related_ids": [
+        "wiki",
+        "decisions",
+        "status"
+      ],
+      "source_refs": [],
+      "default_read": true
+    },
+    {
+      "id": "wiki",
+      "path": "WIKI.md",
+      "title": "Wiki 导航",
+      "summary": "按问题、关键词、首选文件与补读资料路由，避免全量读取。",
+      "tags": [
+        "Wiki",
+        "索引",
+        "导航"
+      ],
+      "kind": "index",
+      "status": "local_document",
+      "related_ids": [
+        "architecture",
+        "skills",
+        "lifecycle",
+        "budget",
+        "ops",
+        "contracts"
+      ],
+      "source_refs": [],
+      "default_read": true
+    },
+    {
+      "id": "architecture",
+      "path": "docs/design/WORKBENCH_DESIGN.md",
+      "title": "完整工作台设计与实施基线",
+      "summary": "本地 Web 已确认；整体架构与执行边界，详细实施按 E0–E7 交接计划。 用户新增会话级 Dashboard、时间线与恢复需求，业务会话映射及左栏入口待设计。",
+      "tags": [
+        "架构",
+        "Sol",
+        "DeepSeek",
+        "Windows",
+        "WSL",
+        "会话",
+        "记忆隔离",
+        "输出",
+        "完整设计",
+        "综合方案",
+        "技术栈",
+        "审阅",
+        "前端重设计",
+        "会话Dashboard",
+        "执行时间线",
+        "异常恢复",
+        "R20"
+      ],
+      "kind": "design",
+      "status": "local_web_confirmed_other_choices_implementation_defaults_or_proposals",
+      "related_ids": [
+        "decisions",
+        "skills",
+        "lifecycle",
+        "budget",
+        "contracts",
+        "plan",
+        "research",
+        "review"
+      ],
+      "source_refs": [
+        "docs/archive/2026-10-15-originals.zip",
+        "docs/references/GITHUB_PROJECT_RESEARCH_2026-10-15.md"
+      ],
+      "default_read": false,
+      "archived_source": {
+        "path": "docs/archive/2026-10-15-originals.zip",
+        "entry": "docs/discussion-memory-2026-10-15/PROJECT_MEMORY.md"
+      }
+    },
+    {
+      "id": "skills",
+      "path": "docs/design/SKILL_MANAGEMENT.md",
+      "title": "Skill 管理设计",
+      "summary": "安装/启用/调用分离；Registry、允许列表、Profile、阶段路由与运行时隔离。",
+      "tags": [
+        "Skill Manager",
+        "Registry",
+        "Profile",
+        "单轮调用",
+        "发现",
+        "隔离"
+      ],
+      "kind": "design",
+      "status": "design_only",
+      "related_ids": [
+        "lifecycle",
+        "candidates",
+        "contracts"
+      ],
+      "source_refs": [
+        "docs/archive/2026-10-15-originals.zip"
+      ],
+      "default_read": false,
+      "archived_source": {
+        "path": "docs/archive/2026-10-15-originals.zip",
+        "entry": "docs/discussion-memory-2026-10-15/PROJECT_MEMORY.md"
+      }
+    },
+    {
+      "id": "lifecycle",
+      "path": "docs/design/FOUR_SKILLS_DESIGN.md",
+      "title": "四种 Skill 设计",
+      "summary": "Prompt Quick/Deep、证据验收、Goal 全链复盘、Token Audit 和共用封装。",
+      "tags": [
+        "prompt-optimizer",
+        "goal-review",
+        "goal-collaboration-postmortem",
+        "token-audit",
+        "Prompt",
+        "验收",
+        "复盘",
+        "因果链"
+      ],
+      "kind": "design",
+      "status": "design_only",
+      "related_ids": [
+        "contracts",
+        "budget",
+        "plan",
+        "conversation",
+        "candidates"
+      ],
+      "source_refs": [
+        "docs/conversations/2026-10-15-four-skills.md",
+        "docs/archive/2026-10-15-originals.zip"
+      ],
+      "default_read": false,
+      "archived_source": {
+        "path": "docs/archive/2026-10-15-originals.zip",
+        "entry": "docs/discussion-memory-2026-10-15/PROJECT_MEMORY.md"
+      }
+    },
+    {
+      "id": "budget",
+      "path": "docs/design/BUDGET_AND_USAGE.md",
+      "title": "用量与预算",
+      "summary": "Python 采集和准入、计量口径、100% 停止下一轮、复核预留、收尾和恢复。",
+      "tags": [
+        "Token",
+        "预算",
+        "100%",
+        "停止",
+        "恢复",
+        "计量",
+        "费用",
+        "review_reserve"
+      ],
+      "kind": "design",
+      "status": "design_only",
+      "related_ids": [
+        "contracts",
+        "lifecycle",
+        "ops"
+      ],
+      "source_refs": [
+        "docs/archive/2026-10-15-originals.zip"
+      ],
+      "default_read": false,
+      "archived_source": {
+        "path": "docs/archive/2026-10-15-originals.zip",
+        "entry": "docs/discussion-memory-2026-10-15/PROJECT_MEMORY.md"
+      }
+    },
+    {
+      "id": "ops",
+      "path": "docs/design/OPS_CAPABILITY_DESIGN.md",
+      "title": "Ops 能力扩展",
+      "summary": "File/Workflow/Git/Trace Adapter；借鉴 ops-workflow/Hermes，保持 Python 唯一调度。",
+      "tags": [
+        "Ops",
+        "Adapter",
+        "Trace",
+        "Handoffs",
+        "文件工具",
+        "Hermes",
+        "ops-workflow",
+        "dsh-ops",
+        "SSH"
+      ],
+      "kind": "design",
+      "status": "design_only",
+      "related_ids": [
+        "contracts",
+        "budget",
+        "lifecycle"
+      ],
+      "source_refs": [
+        "docs/archive/2026-10-15-originals.zip"
+      ],
+      "default_read": false,
+      "archived_source": {
+        "path": "docs/archive/2026-10-15-originals.zip",
+        "entry": "OPS_CAPABILITY_DESIGN_20261015.md"
+      }
+    },
+    {
+      "id": "contracts",
+      "path": "docs/design/DATA_CONTRACTS.md",
+      "title": "数据与事件约定",
+      "summary": "Workspace/Goal/Plan/Session/Decision/Run/Evidence/Usage 对象、版本、事件、状态和交接。",
+      "tags": [
+        "协议",
+        "数据",
+        "事件",
+        "证据",
+        "JSON",
+        "Goal",
+        "Run",
+        "Decision",
+        "schema"
+      ],
+      "kind": "design",
+      "status": "design_only",
+      "related_ids": [
+        "lifecycle",
+        "budget",
+        "goal_example",
+        "session_example",
+        "trace_example"
+      ],
+      "source_refs": [
+        "docs/archive/2026-10-15-originals.zip",
+        "docs/conversations/2026-10-15-four-skills.md"
+      ],
+      "default_read": false,
+      "archived_source": {
+        "path": "docs/archive/2026-10-15-originals.zip",
+        "entry": "docs/discussion-memory-2026-10-15/DATA_CONTRACTS.md"
+      }
+    },
+    {
+      "id": "decisions",
+      "path": "docs/design/DECISIONS_AND_OPEN_QUESTIONS.md",
+      "title": "决策与待确认事项",
+      "summary": "已保留约束、实现默认与待定问题；R20 记录会话级 Dashboard、时间线和异常恢复等前端需求。",
+      "tags": [
+        "要求",
+        "决定",
+        "建议",
+        "待定",
+        "冲突",
+        "R01",
+        "R17",
+        "前端重设计",
+        "会话Dashboard",
+        "执行时间线",
+        "异常恢复",
+        "R20"
+      ],
+      "kind": "design",
+      "status": "design_only",
+      "related_ids": [
+        "architecture",
+        "status",
+        "conversation"
+      ],
+      "source_refs": [
+        "docs/archive/2026-10-15-originals.zip",
+        "docs/conversations/2026-10-15-four-skills.md"
+      ],
+      "default_read": false,
+      "archived_source": {
+        "path": "docs/archive/2026-10-15-originals.zip",
+        "entry": "docs/discussion-memory-2026-10-15/DECISIONS_AND_OPEN_QUESTIONS.md"
+      }
+    },
+    {
+      "id": "plan",
+      "path": "docs/design/IMPLEMENTATION_PLAN.md",
+      "title": "Web MVP 执行计划",
+      "summary": "E0–E7：环境、网页骨架、事件预算、双端接入、真实闭环、界面、最小 Wiki/Skill 和 A01–A15 验收。",
+      "tags": [
+        "实施",
+        "里程碑",
+        "验收",
+        "模拟",
+        "重放",
+        "优先级",
+        "E0",
+        "E7",
+        "执行计划",
+        "MVP",
+        "A01",
+        "A15"
+      ],
+      "kind": "design",
+      "status": "executed_e0_e7_reports_available",
+      "related_ids": [
+        "architecture",
+        "contracts",
+        "budget",
+        "handoff",
+        "report_template"
+      ],
+      "source_refs": [
+        "docs/archive/2026-10-15-originals.zip",
+        "docs/conversations/2026-10-15-four-skills.md"
+      ],
+      "default_read": false,
+      "archived_source": {
+        "path": "docs/archive/2026-10-15-originals.zip",
+        "entry": "docs/discussion-memory-2026-10-15/IMPLEMENTATION_PLAN.md"
+      }
+    },
+    {
+      "id": "candidates",
+      "path": "docs/references/SKILL_CANDIDATES.md",
+      "title": "Skill 候选来源",
+      "summary": "历史第三方来源与核验清单；不代表已安装、已兼容或已获执行授权。",
+      "tags": [
+        "GitHub",
+        "来源",
+        "许可证",
+        "候选",
+        "unslop",
+        "codebase-design",
+        "agent-retro",
+        "verify-pr"
+      ],
+      "kind": "reference",
+      "status": "partially_public_sources_verified_not_installed",
+      "related_ids": [
+        "skills",
+        "lifecycle",
+        "ops"
+      ],
+      "source_refs": [
+        "docs/archive/2026-10-15-originals.zip",
+        "docs/conversations/2026-10-15-four-skills.md"
+      ],
+      "default_read": false,
+      "archived_source": {
+        "path": "docs/archive/2026-10-15-originals.zip",
+        "entry": "docs/discussion-memory-2026-10-15/SKILL_CANDIDATES.md"
+      }
+    },
+    {
+      "id": "conversation",
+      "path": "docs/conversations/2026-10-15-four-skills.md",
+      "title": "四种 Skill 设计讨论",
+      "summary": "本轮粘贴回答的可读 Markdown，清理图卡和 CSS，保留原文观点并重建可见流程。",
+      "tags": [
+        "对话",
+        "原文",
+        "四种Skill",
+        "讨论",
+        "2026-10-15"
+      ],
+      "kind": "conversation",
+      "status": "localized_source_not_reverified",
+      "related_ids": [
+        "lifecycle",
+        "raw_source",
+        "status"
+      ],
+      "source_refs": [
+        "docs/sources/2026-10-15-four-skills.original.txt"
+      ],
+      "default_read": false
+    },
+    {
+      "id": "raw_source",
+      "path": "docs/sources/2026-10-15-four-skills.original.txt",
+      "title": "用户附件原文",
+      "summary": "附件逐字节副本，含页面导出噪声，核对原措辞时读取。",
+      "tags": [
+        "来源",
+        "附件",
+        "原始文本"
+      ],
+      "kind": "source",
+      "status": "byte_preserved_source",
+      "related_ids": [
+        "conversation",
+        "status"
+      ],
+      "source_refs": [],
+      "default_read": false
+    },
+    {
+      "id": "handoff",
+      "path": "docs/CODEX_HANDOFF.md",
+      "title": "执行 Agent 完整提示词",
+      "summary": "用户将此提示词交给一个本地 Agent，连续实施 E0–E7 并按真实/模拟分开的标准交付。",
+      "tags": [
+        "交接",
+        "模型",
+        "继续开发",
+        "执行提示词",
+        "开发交接",
+        "MVP"
+      ],
+      "kind": "handoff",
+      "status": "dispatched_executed_reports_available",
+      "related_ids": [
+        "instructions",
+        "plan",
+        "report_template",
+        "contracts"
+      ],
+      "source_refs": [],
+      "default_read": false
+    },
+    {
+      "id": "status",
+      "path": "docs/SOURCES_AND_STATUS.md",
+      "title": "来源与实际状态",
+      "summary": "资料整理与 GitHub 研究的来源范围；Windows 已落盘，公开核验与未实施/未运行明确分开。",
+      "tags": [
+        "来源",
+        "状态",
+        "落盘",
+        "进度"
+      ],
+      "kind": "status",
+      "status": "local_document",
+      "related_ids": [
+        "organization",
+        "conversation",
+        "memory"
+      ],
+      "source_refs": [],
+      "default_read": false
+    },
+    {
+      "id": "goal_example",
+      "path": "docs/examples/goal.example.json",
+      "title": "Goal 模拟示例",
+      "summary": "模拟 Goal、版本、验收和预算；数字不是批准的额度。",
+      "tags": [
+        "模拟",
+        "示例",
+        "JSON"
+      ],
+      "kind": "example",
+      "status": "example_only",
+      "related_ids": [
+        "contracts"
+      ],
+      "source_refs": [
+        "docs/archive/2026-10-15-originals.zip"
+      ],
+      "default_read": false,
+      "archived_source": {
+        "path": "docs/archive/2026-10-15-originals.zip",
+        "entry": "docs/discussion-memory-2026-10-15/examples/goal.example.json"
+      }
+    },
+    {
+      "id": "session_example",
+      "path": "docs/examples/session.example.json",
+      "title": "Session 模拟示例",
+      "summary": "模拟会话角色、模型空值、记忆策略和 Skill 配置。",
+      "tags": [
+        "模拟",
+        "示例",
+        "JSON"
+      ],
+      "kind": "example",
+      "status": "example_only",
+      "related_ids": [
+        "contracts"
+      ],
+      "source_refs": [
+        "docs/archive/2026-10-15-originals.zip"
+      ],
+      "default_read": false,
+      "archived_source": {
+        "path": "docs/archive/2026-10-15-originals.zip",
+        "entry": "docs/discussion-memory-2026-10-15/examples/session.example.json"
+      }
+    },
+    {
+      "id": "trace_example",
+      "path": "docs/examples/decision-trace.example.json",
+      "title": "决策链模拟示例",
+      "summary": "模拟 Decision、Run、Result、Review 与 SkillUsage 观测。",
+      "tags": [
+        "模拟",
+        "示例",
+        "JSON"
+      ],
+      "kind": "example",
+      "status": "example_only",
+      "related_ids": [
+        "contracts"
+      ],
+      "source_refs": [
+        "docs/archive/2026-10-15-originals.zip"
+      ],
+      "default_read": false,
+      "archived_source": {
+        "path": "docs/archive/2026-10-15-originals.zip",
+        "entry": "docs/discussion-memory-2026-10-15/examples/decision-trace.example.json"
+      }
+    },
+    {
+      "id": "organization",
+      "path": "docs/maintenance/ORGANIZATION_2026-10-15.md",
+      "title": "项目整理记录",
+      "summary": "29 原文件、12 重复、17 独立原文备份和主题归并说明。",
+      "tags": [
+        "维护",
+        "去重",
+        "迁移",
+        "备份"
+      ],
+      "kind": "maintenance",
+      "status": "local_document",
+      "related_ids": [
+        "inventory",
+        "validation",
+        "status"
+      ],
+      "source_refs": [],
+      "default_read": false
+    },
+    {
+      "id": "inventory",
+      "path": "docs/maintenance/organization-2026-10-15.json",
+      "title": "原文件与迁移清单",
+      "summary": "原始大小/哈希、重复映射、迁移路径和备份 ZIP 哈希。",
+      "tags": [
+        "哈希",
+        "清单",
+        "备份",
+        "SHA256"
+      ],
+      "kind": "maintenance",
+      "status": "local_document",
+      "related_ids": [
+        "organization"
+      ],
+      "source_refs": [],
+      "default_read": false
+    },
+    {
+      "id": "validation",
+      "path": "docs/maintenance/VALIDATION_2026-10-15.md",
+      "title": "整理核验结果",
+      "summary": "本地链接、JSON、索引、来源副本、备份和示例保真检查。",
+      "tags": [
+        "核验",
+        "链接",
+        "JSON",
+        "完整性"
+      ],
+      "kind": "maintenance",
+      "status": "local_document",
+      "related_ids": [
+        "organization"
+      ],
+      "source_refs": [],
+      "default_read": false
+    },
+    {
+      "id": "research",
+      "path": "docs/references/GITHUB_PROJECT_RESEARCH_2026-10-15.md",
+      "title": "GitHub 参考项目调研",
+      "summary": "16 个仓库的公开线索、30 份固定版本文件，来源纠正、设计复用与边界。",
+      "tags": [
+        "GitHub",
+        "参考项目",
+        "调研",
+        "CodexFlow",
+        "T3 Code",
+        "AGX",
+        "Operations",
+        "来源纠正"
+      ],
+      "kind": "research",
+      "status": "public_sources_verified_not_runtime_tested",
+      "related_ids": [
+        "architecture",
+        "research_evidence",
+        "review",
+        "candidates"
+      ],
+      "source_refs": [
+        "docs/references/github-research-2026-10-15.json"
+      ],
+      "default_read": false
+    },
+    {
+      "id": "research_evidence",
+      "path": "docs/references/github-research-2026-10-15.json",
+      "title": "GitHub 调研版本与来源清单",
+      "summary": "仓库 commit、选定文件 SHA-256、真实 Skill 路径、FastCtx 发布版与官方来源。",
+      "tags": [
+        "版本",
+        "commit",
+        "SHA256",
+        "来源",
+        "核验"
+      ],
+      "kind": "research_evidence",
+      "status": "metadata_and_selected_file_checks",
+      "related_ids": [
+        "research"
+      ],
+      "source_refs": [],
+      "default_read": false
+    },
+    {
+      "id": "review",
+      "path": "docs/design/DESIGN_REVIEW.md",
+      "title": "设计审阅议题",
+      "summary": "D01 本地 Web 已确认；其他议题保持讨论状态，首版按执行计划默认推进。",
+      "tags": [
+        "讨论",
+        "审阅",
+        "取舍",
+        "待确认",
+        "D01",
+        "D14"
+      ],
+      "kind": "review",
+      "status": "D01_confirmed_remaining_not_individually_confirmed",
+      "related_ids": [
+        "architecture",
+        "research",
+        "decisions"
+      ],
+      "source_refs": [
+        "docs/design/WORKBENCH_DESIGN.md"
+      ],
+      "default_read": false
+    },
+    {
+      "id": "research_validation",
+      "path": "docs/maintenance/RESEARCH_VALIDATION_2026-10-15.md",
+      "title": "调研和设计核验结果",
+      "summary": "调研文件、索引、完整设计覆盖、相对链接及原件保真的检查结果。",
+      "tags": [
+        "核验",
+        "调研",
+        "设计",
+        "文档"
+      ],
+      "kind": "maintenance",
+      "status": "local_document",
+      "related_ids": [
+        "research",
+        "architecture"
+      ],
+      "source_refs": [],
+      "default_read": false
+    },
+    {
+      "id": "report_template",
+      "path": "docs/EXECUTION_REPORT_TEMPLATE.md",
+      "title": "执行反馈报告模板",
+      "summary": "执行 Agent 填写 Markdown 与 JSON 结果，包含真实闭环、A01–A15、证据、启动和阻塞。",
+      "tags": [
+        "反馈",
+        "执行结果",
+        "报告",
+        "验收",
+        "A01",
+        "A15"
+      ],
+      "kind": "template",
+      "status": "template_not_execution_record",
+      "related_ids": [
+        "plan",
+        "handoff"
+      ],
+      "source_refs": [
+        "docs/design/IMPLEMENTATION_PLAN.md"
+      ],
+      "default_read": false
+    },
+    {
+      "id": "handoff_validation",
+      "path": "docs/maintenance/HANDOFF_VALIDATION_2026-10-15.md",
+      "title": "执行交接资料核验",
+      "summary": "本轮提示词、计划、模板、索引与链接检查；无应用执行。",
+      "tags": [
+        "交接",
+        "核验",
+        "执行计划"
+      ],
+      "kind": "maintenance",
+      "status": "local_document",
+      "related_ids": [
+        "plan",
+        "handoff",
+        "report_template"
+      ],
+      "source_refs": [],
+      "default_read": false
+    },
+    {
+      "id": "mvp_report",
+      "path": "docs/reports/MVP_EXECUTION_REPORT.md",
+      "title": "MVP 执行报告",
+      "summary": "E0–E7 实施结果：启动方式、真实/模拟结果、A01–A15 逐项状态、差异与剩余问题（PARTIAL_BLOCKED）。",
+      "tags": [
+        "报告",
+        "执行结果",
+        "验收",
+        "A01",
+        "A15",
+        "真实闭环",
+        "PARTIAL_BLOCKED"
+      ],
+      "kind": "report",
+      "status": "original_execution_report_followed_by_changes_required_review",
+      "related_ids": [
+        "result_json",
+        "env_report",
+        "plan",
+        "handoff",
+        "stage_review"
+      ],
+      "source_refs": [
+        "docs/reports/evidence/"
+      ],
+      "default_read": false
+    },
+    {
+      "id": "result_json",
+      "path": "docs/reports/MVP_EXECUTION_RESULT.json",
+      "title": "机器结果摘要",
+      "summary": "schema 1.0：完成状态、模式、A01–A15、测试、demo goal、差异、阻碍与剩余工作。",
+      "tags": [
+        "JSON",
+        "机器摘要",
+        "验收",
+        "阻碍"
+      ],
+      "kind": "report",
+      "status": "final_for_review",
+      "related_ids": [
+        "mvp_report"
+      ],
+      "source_refs": [],
+      "default_read": false
+    },
+    {
+      "id": "env_report",
+      "path": "docs/reports/ENVIRONMENT_REPORT.md",
+      "title": "环境与能力报告",
+      "summary": "主机/工具链、Codex 版本与协议实测、认证就绪、模型列表；WSL 阻碍的准确证据。",
+      "tags": [
+        "环境",
+        "版本",
+        "协议",
+        "WSL",
+        "阻碍"
+      ],
+      "kind": "report",
+      "status": "final_for_review",
+      "related_ids": [
+        "mvp_report"
+      ],
+      "source_refs": [
+        "docs/reports/evidence/e0/"
+      ],
+      "default_read": false
+    },
+    {
+      "id": "evidence_index",
+      "path": "docs/reports/evidence/",
+      "title": "验收证据目录",
+      "summary": "浏览器截图与脚本结果、真实调用输出、会话实验、验收 JSON、工作流报告、代码清单哈希与测试输出。",
+      "tags": [
+        "证据",
+        "截图",
+        "哈希",
+        "测试输出"
+      ],
+      "kind": "evidence",
+      "status": "collected",
+      "related_ids": [
+        "mvp_report",
+        "result_json"
+      ],
+      "source_refs": [],
+      "default_read": false
+    },
+    {
+      "id": "stage_review",
+      "path": "docs/reports/STAGE_REVIEW_2026-10-15.md",
+      "title": "Web MVP 阶段性独立评估",
+      "summary": "原测试与构建通过；10 组定向反例揭示 7 类可靠性/范围缺陷，进入稳定性修复，尚不通过阶段验收。",
+      "tags": [
+        "阶段评估",
+        "独立审查",
+        "缺陷",
+        "可靠性",
+        "CHANGES_REQUIRED",
+        "F01",
+        "F07"
+      ],
+      "kind": "review_report",
+      "status": "changes_required",
+      "related_ids": [
+        "stage_review_evidence",
+        "mvp_report",
+        "result_json",
+        "env_report",
+        "plan"
+      ],
+      "source_refs": [
+        "docs/reports/evidence/stage-review/verification.json"
+      ],
+      "default_read": false
+    },
+    {
+      "id": "stage_review_evidence",
+      "path": "docs/reports/evidence/stage-review/verification.json",
+      "title": "阶段审查定向反例与代码哈希",
+      "summary": "隔离模拟/Stub 检查结果、标准测试及构建结论、当前源码哈希与发现映射。",
+      "tags": [
+        "反例",
+        "复现",
+        "证据",
+        "SHA256",
+        "阶段评估"
+      ],
+      "kind": "review_evidence",
+      "status": "controlled_probes_no_paid_or_wsl_calls",
+      "related_ids": [
+        "stage_review"
+      ],
+      "source_refs": [],
+      "default_read": false
+    }
+  ],
+  "archive": {
+    "path": "docs/archive/2026-10-15-originals.zip",
+    "sha256": "10713e88c5a07512937a76157b42a351c0c3ac1514648eb7b71157c792f09256",
+    "unique_original_files": 17,
+    "purpose": "traceability_and_recovery_only",
+    "default_read": false
+  },
+  "confirmed_constraints_ref": "docs/design/DECISIONS_AND_OPEN_QUESTIONS.md"
+}

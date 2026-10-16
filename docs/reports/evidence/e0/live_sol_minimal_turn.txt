@@ -1,0 +1,10 @@
+[1] start app-server + initialize …
+    OK thread_id=01a1412e-2037-7ec1-993b-4ab3d19c7d61 (client ready in 0.7s)
+[2] turn outcome: completed
+    final_message: PONG
+    turn_id: 01a1412e-20ea-76f0-a3cd-34dc13648db6 | duration_ms: 6074
+    error: None
+[3] transient deltas: 6 chars: 108
+[4] product events: []
+[5] usage snapshot: total_tokens = 14557 input = 14551 output = 6 reasoning = 0
+[static] {"thread_id": "01a1412e-2037-7ec1-993b-4ab3d19c7d61", "turn_status": "completed", "turn_id": "01a1412e-20ea-76f0-a3cd-34dc13648db6", "final_message": "PONG", "usage_total_tokens": 14557, "interrupted": false}

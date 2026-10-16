@@ -1,0 +1,40 @@
+{
+ "turns": [
+  {
+   "id": "T1-new-thread-A(history)",
+   "thread_id": "01a1413f-5536-7d20-83c7-52831ed9c37a",
+   "final_message": ""
+  },
+  {
+   "id": "T2-new-thread-B(history)",
+   "thread_id": "01a1413f-6891-7f82-935c-3a8564f9c72b",
+   "final_message": "",
+   "isolation_ok": false
+  },
+  {
+   "id": "T3-resume-A",
+   "thread_id": "01a1413f-5536-7d20-83c7-52831ed9c37a",
+   "status": "completed",
+   "final_message": "ALPHA-7",
+   "resume_ok": true
+  },
+  {
+   "id": "T4-effort-switch",
+   "thread_id": "01a1413f-5536-7d20-83c7-52831ed9c37a",
+   "effort_after": "medium",
+   "status": "completed",
+   "final_message": "ALPHA-7",
+   "history_kept": true
+  }
+ ],
+ "history_turns_a": 0,
+ "history_turns_b": 0,
+ "checks": {
+  "t1_completed_or_recorded": false,
+  "threads_distinct": true,
+  "isolation_ok": false,
+  "resume_ok": true,
+  "history_kept_after_effort_switch": true
+ },
+ "all_pass": false
+}
